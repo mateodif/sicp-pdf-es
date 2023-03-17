@@ -417,54 +417,64 @@ Una visión general del compilador
 @end detailmenu
 @end menu
 
-@unnumbered Unofficial Texinfo Format
-@node    UTF, Dedication, Top, Top
+@unnumbered Formato Texinfo no oficial
+@node UTF, Dedication, Top, Top
 
-This is the second edition @acronym{SICP} book, from Unofficial Texinfo
-Format.
+Este es el libro de la segunda edición de @acronym{SICP}, en Formato
+Texinfo no oficial.
 
-You are probably reading it in an Info hypertext browser, such as the Info
-mode of Emacs.  You might alternatively be reading it @TeX{}-formatted on your
-screen or printer, though that would be silly.  And, if printed, expensive.
+Probablemente lo estás leyendo en un navegador hipertexto Info, como
+el modo Info de Emacs. También es posible que lo estés leyendo en
+formato @TeX{} en tu pantalla o impresora, aunque sería absurdo e
+incluso costoso si lo imprimieras.
 
-The freely-distributed official @acronym{HTML}-and-@acronym{GIF} format was
-first converted personally to Unofficial Texinfo Format (@acronym{UTF})
-version 1 by Lytha Ayth during a long Emacs lovefest weekend in April, 2001.
+El formato oficial distribuido libremente en @acronym{HTML} y
+@acronym{GIF} fue convertido personalmente a la versión 1 del Formato
+Texinfo no oficial (@acronym{UTF}) por Lytha Ayth durante un fin de
+semana de amor con Emacs en abril de 2001.
 
-The @acronym{UTF} is easier to search than the @acronym{HTML} format.  It is
-also much more accessible to people running on modest computers, such as
-donated '386-based PCs.  A 386 can, in theory, run Linux, Emacs, and a Scheme
-interpreter simultaneously, but most 386s probably can't also run both Netscape
-and the necessary X Window System without prematurely introducing budding young
-underfunded hackers to the concept of @newterm{thrashing}.  @acronym{UTF} can also fit
-uncompressed on a 1.44@acronym{MB} floppy diskette, which may come in handy for
-installing @acronym{UTF} on PCs that do not have Internet or @acronym{LAN} access.
+El formato @acronym{UTF} es más fácil de buscar que el formato
+@acronym{HTML}. También es mucho más accesible para personas que
+trabajan en computadoras modestas, como las PC basadas en '386
+donadas. En teoría, una PC '386 puede ejecutar Linux, Emacs e
+intérprete de Scheme simultáneamente, pero probablemente no puede
+ejecutar tanto Netscape como el necesario Sistema de Ventanas X sin
+introducir prematuramente a los jóvenes hackers subfinanciados en
+ciernes al concepto de @newterm{thrashing}. @acronym{UTF} también
+puede caber sin comprimir en una disquetera de 1.44@acronym{MB}, lo
+que puede ser útil para instalar @acronym{UTF} en PCs que no tienen
+acceso a Internet o @acronym{LAN}.
 
-The Texinfo conversion has been a straight transliteration, to the extent
-possible.  Like the @TeX{}-to-@acronym{HTML} conversion, this was not without
-some introduction of breakage.  In the case of Unofficial Texinfo Format,
-figures have suffered an amateurish resurrection of the lost art of
-@acronym{ASCII}.  Also, it's quite possible that some errors of ambiguity
-were introduced during the conversion of some of the copious superscripts (`\^{}')
-and subscripts (`\_').  Divining @emph{which} has been left as an exercise to
-the reader. But at least we don't put our brave astronauts at risk by encoding
-the @emph{greater-than-or-equal} symbol as @code{<u>\&gt;</u>}.
+La conversión a Texinfo ha sido una transliteración directa en la
+medida de lo posible. Al igual que en la conversión de @TeX{} a
+@acronym{HTML}, esto no estuvo exento de alguna introducción de
+errores. En el caso del Formato Texinfo no oficial, las figuras han
+sufrido una resurrección amateur del arte perdido de @acronym{ASCII}.
+También es posible que se hayan introducido algunos errores de
+ambigüedad durante la conversión de algunos de los copiosos
+superíndices (`\^{}') y subíndices (`\_'). Descubrir @emph{cuáles} se ha
+dejado como ejercicio para el lector. Pero al menos no ponemos en
+riesgo a nuestros valientes astronautas codificando el símbolo
+@emph{greater-than-or-equal} como @code{<u>\&gt;</u>}.
 
-If you modify @file{sicp.texi} to correct errors or improve the
-@acronym{ASCII} art, then update the @code{@@set utfversion @value{utfversion}}
-line to reflect your delta.  For example, if you started with Lytha's version
-@code{1}, and your name is Bob, then you could name your successive versions
-@code{1.bob1}, @code{1.bob2}, @dots{} @code{1.bob@i{n}}.  Also update
-@code{utfversiondate}.  If you want to distribute your version on the Web, then
-embedding the string ``sicp.texi'' somewhere in the file or Web page will make
-it easier for people to find with Web search engines.
+Si modificas @file{sicp.texi} para corregir errores o mejorar el arte
+de @acronym{ASCII}, actualiza la línea @code{@@set utfversion
+@value{utfversion}} para reflejar tus cambios. Por ejemplo, si
+partiste de la versión de Lytha @code{1}, y tu nombre es Bob, podrías
+nombrar tus versiones sucesivas como @code{1.bob1}, @code{1.bob2},
+@dots{} @code{1.bob@i{n}}. También actualiza @code{utfversiondate}. Si
+deseas distribuir tu versión en la Web, incorporar la cadena
+"sicp.texi" en algún lugar del archivo o la página web facilitará a
+las personas encontrarlo con los motores de búsqueda de la web.
 
-It is believed that the Unofficial Texinfo Format is in keeping with the
-spirit of the graciously freely-distributed @acronym{HTML} version.  But you
-never know when someone's armada of lawyers might need something to do, and get
-their shorts all in a knot over some benign little thing, so think twice before
-you use your full name or distribute Info, @acronym{DVI}, PostScript, or
-@acronym{PDF} formats that might embed your account or machine name.
+Se cree que el formato no oficial de Texinfo está en línea con el
+espíritu de la versión @acronym{HTML} distribuida gratuitamente y
+generosamente. Pero nunca se sabe cuándo el ejército de abogados de
+alguien pueda necesitar algo que hacer, y ponerse nerviosos por alguna
+cosa pequeña e inofensiva, así que piense dos veces antes de usar su
+nombre completo o de distribuir formatos Info, @acronym{DVI},
+PostScript o @acronym{PDF} que puedan incrustar su cuenta o nombre de
+máquina.
 
 @sp 0.5
 @noindent
@@ -472,225 +482,268 @@ you use your full name or distribute Info, @acronym{DVI}, PostScript, or
 
 @sp 1.0
 @noindent
-@b{Addendum:} See also the @acronym{SICP} video lectures by Abelson and Sussman:@*
-at @url{http://groups.csail.mit.edu/mac/classes/6.001/abelson-sussman-lectures/, @acronym{MIT CSAIL}} or
-@url{http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-001-structure-and-interpretation-of-computer-programs-spring-2005/video-lectures/, @acronym{MIT OCW}}.
+@b{Adición:} Vea también las conferencias en video de @acronym{SICP}
+de Abelson y Sussman:@* en
+@url{http://groups.csail.mit.edu/mac/classes/6.001/abelson-sussman-lectures/,
+@acronym{MIT CSAIL}} o
+@url{http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-001-structure-and-interpretation-of-computer-programs-spring-2005/video-lectures/,
+@acronym{MIT OCW}}.
 
 @sp 0.5
 @noindent
-@b{Second Addendum:} Above is the original introduction to the @acronym{UTF}
-from 2001. Ten years later, @acronym{UTF} has been transformed: mathematical
-symbols and formulas are properly typeset, and figures drawn in
-vector graphics. The original text formulas and @acronym{ASCII} art figures
-are still there in the Texinfo source, but will display only when compiled
-to Info output. At the dawn of e-book readers and tablets, reading a
-@acronym{PDF} on screen is officially not silly anymore. Enjoy!
+@b{Segunda adición:} Lo anterior es la introducción original al
+@acronym{UTF} de 2001. Diez años después, el @acronym{UTF} ha sido
+transformado: los símbolos y fórmulas matemáticas están correctamente
+tipografiados, y las figuras dibujadas en gráficos vectoriales. Las
+fórmulas de texto original y las figuras de arte ASCII todavía están
+presentes en la fuente de Texinfo, pero sólo se mostrarán cuando se
+compilen en la salida de Info. Al amanecer de los lectores de libros
+electrónicos y las tabletas, leer un @acronym{PDF} en pantalla ya no
+es ridículo oficialmente. ¡Disfrútalo!
 
 \enlargethispage{\baselineskip}
 
 @sp 0.5
 @noindent
-@i{A.R, May, 2011}
+@i{A.R, mayo de 2011}
 
-@unnumbered Dedication
-@node    Dedication, Foreword, UTF, Top
+@unnumbered Dedicatoria
+@node Dedication, Foreword, UTF, Top
 
-\lettrine{T}{his book is dedicated}, in respect and admiration, to the spirit that lives in
-the computer.
+\lettrine{E}{ste libro está dedicado}, con respeto y admiración, al
+espíritu que vive en la computadora.
 
 @quotation
-``I think that it's extraordinarily important that we in computer science keep
-fun in computing.  When it started out, it was an awful lot of fun.  Of course,
-the paying customers got shafted every now and then, and after a while we began
-to take their complaints seriously.  We began to feel as if we really were
-responsible for the successful, error-free perfect use of these machines.  I
-don't think we are.  I think we're responsible for stretching them, setting
-them off in new directions, and keeping fun in the house.  I hope the field of
-computer science never loses its sense of fun.  Above all, I hope we don't
-become missionaries.  Don't feel as if you're Bible salesmen.  The world has
-too many of those already.  What you know about computing other people will
-learn.  Don't feel as if the key to successful computing is only in your hands.
-What's in your hands, I think and hope, is intelligence: the ability to see the
-machine as more than when you were first led up to it, that you can make it
-more.''
+``Creo que es sumamente importante que nosotros, en informática,
+mantengamos la diversión en la computación. Cuando empezó, era muy
+divertido. Por supuesto, los clientes de pago a veces salían
+perjudicados, y después de un tiempo comenzamos a tomar sus quejas en
+serio. Empezamos a sentir como si realmente fuéramos responsables del
+uso perfecto y sin errores de estas máquinas. No creo que lo seamos.
+Creo que somos responsables de expandirlas, llevarlas en nuevas
+direcciones y mantener la diversión en el ambiente. Espero que la
+informática nunca pierda su sentido de diversión. Sobre todo, espero
+que no nos convirtamos en misioneros. No se sientan como si fueran
+vendedores de Biblias. El mundo ya tiene demasiados de esos. Lo que
+saben sobre la informática, otras personas lo aprenderán. No sientan
+que la clave para una informática exitosa está solo en sus manos. Lo
+que tienen en sus manos, creo y espero, es la inteligencia: la
+capacidad de ver la máquina como algo más de lo que era cuando se la
+presentaron, que pueden hacerla mejor.''
 
 \enlargethispage{\baselineskip}
 
 @noindent
----Alan J. Perlis (April 1, 1922 -- February 7, 1990)
+---Alan J. Perlis (1 de abril de 1922 - 7 de febrero de 1990)
 @end quotation
 
-@unnumbered Foreword
+@unnumbered Prólogo
 @node    Foreword, Preface, Dedication, Top
 
 @c @sp -0.6
 
-\lettrine{E}{ducators, generals, dieticians}, psychologists, and parents program.  Ar\-mies,
-students, and some societies are programmed.  An assault on large problems
-employs a succession of programs, most of which spring into existence en route.
-These programs are rife with issues that appear to be particular to the problem
-at hand.  To appreciate programming as an intellectual activity in its own
-right you must turn to computer programming; you must read and write computer
-programs---many of them.  It doesn't matter much what the programs are about or
-what applications they serve.  What does matter is how well they perform and
-how smoothly they fit with other programs in the creation of still greater
-programs.  The programmer must seek both perfection of part and adequacy of
-collection.  In this book the use of ``program'' is focused on the creation,
-execution, and study of programs written in a dialect of Lisp for execution on
-a digital computer.  Using Lisp we restrict or limit not what we may program,
-but only the notation for our program descriptions.
+@lettrine{E}{ducadores, generales, dietistas}, psicólogos y padres
+programan. Los ejércitos, los estudiantes y algunas sociedades están
+programados. Un asalto a grandes problemas emplea una sucesión de
+programas, la mayoría de los cuales surgen en el camino. Estos
+programas están llenos de problemas que parecen ser específicos del
+problema en cuestión. Para apreciar la programación como una actividad
+intelectual por derecho propio, debes recurrir a la programación de
+computadoras; debes leer y escribir programas de computadora, muchos
+de ellos. No importa mucho de qué traten los programas o qué
+aplicaciones sirvan. Lo que importa es cuán bien funcionan y cómo
+encajan sin problemas con otros programas en la creación de programas
+aún mayores. El programador debe buscar tanto la perfección de la
+parte como la adecuación de la colección. En este libro, el uso de
+"programa" se centra en la creación, ejecución y estudio de programas
+escritos en un dialecto de Lisp para su ejecución en una computadora
+digital. Usando Lisp, restringimos o limitamos no lo que podemos
+programar, sino solo la notación para nuestras descripciones de
+programas.
 
-Our traffic with the subject matter of this book involves us with three foci of
-phenomena: the human mind, collections of computer programs, and the computer.
-Every computer program is a model, hatched in the mind, of a real or mental
-process.  These processes, arising from human experience and thought, are huge
-in number, intricate in detail, and at any time only partially understood.
-They are modeled to our permanent satisfaction rarely by our computer programs.
-Thus even though our programs are carefully handcrafted discrete collections of
-symbols, mosaics of interlocking functions, they continually evolve: we change
-them as our perception of the model deepens, enlarges, generalizes until the
-model ultimately attains a metastable place within still another model with
-which we struggle.  The source of the exhilaration associated with computer
-programming is the continual unfolding within the mind and on the computer of
-mechanisms expressed as programs and the explosion of perception they generate.
-If art interprets our dreams, the computer executes them in the guise of
-programs!
+Nuestro trato con el tema de este libro nos involucra con tres focos
+de fenómenos: la mente humana, colecciones de programas de computadora
+y la computadora. Cada programa de computadora es un modelo, creado en
+la mente, de un proceso real o mental. Estos procesos, surgidos de la
+experiencia y el pensamiento humano, son numerosos, intrincados en
+detalle y solo parcialmente comprendidos en cualquier momento. Rara
+vez nuestros programas de computadora los modelan a nuestra
+satisfacción permanente. Por lo tanto, aunque nuestros programas son
+cuidadosamente creados a mano, como colecciones discretas de símbolos,
+mosaicos de funciones interconectadas, evolucionan continuamente: los
+cambiamos a medida que nuestra percepción del modelo se profundiza,
+amplía y generaliza, hasta que el modelo finalmente alcanza un lugar
+metaestable dentro de otro modelo con el que luchamos. La fuente de la
+emoción asociada con la programación de computadoras es el continuo
+desarrollo en la mente y en la computadora de mecanismos expresados
+como programas y la explosión de percepción que generan. Si el arte
+interpreta nuestros sueños, ¡la computadora los ejecuta disfrazados de
+programas!
 
-For all its power, the computer is a harsh taskmaster.  Its programs must be
-correct, and what we wish to say must be said accurately in every detail.  As
-in every other symbolic activity, we become convinced of program truth through
-argument.  Lisp itself can be assigned a semantics (another model, by the way),
-and if a program's function can be specified, say, in the predicate calculus,
-the proof methods of logic can be used to make an acceptable correctness
-argument.  Unfortunately, as programs get large and complicated, as they almost
-always do, the adequacy, consistency, and correctness of the specifications
-themselves become open to doubt, so that complete formal arguments of
-correctness seldom accompany large programs.  Since large programs grow from
-small ones, it is crucial that we develop an arsenal of standard program
-structures of whose correctness we have become sure---we call them idioms---and
-learn to combine them into larger structures using organizational techniques of
-proven value.  These techniques are treated at length in this book, and
-understanding them is essential to participation in the Promethean enterprise
-called programming.  More than anything else, the uncovering and mastery of
-powerful organizational techniques accelerates our ability to create large,
-significant programs.  Conversely, since writing large programs is very taxing,
-we are stimulated to invent new methods of reducing the mass of function and
-detail to be fitted into large programs.
+A pesar de todo su poder, la computadora es una estricta exigente. Sus
+programas deben ser correctos, y lo que deseamos decir debe ser dicho
+con precisión en cada detalle. Como en cualquier otra actividad
+simbólica, nos convencemos de la verdad del programa a través de
+argumentos. Lisp en sí mismo puede ser asignado a una semántica (otro
+modelo, por cierto), y si se puede especificar la función de un
+programa, por ejemplo, en el cálculo de predicados, los métodos de
+prueba de la lógica se pueden usar para hacer un argumento aceptable
+de corrección. Desafortunadamente, a medida que los programas se hacen
+más grandes y complicados, como casi siempre ocurre, la adecuación,
+consistencia y corrección de las especificaciones mismas se vuelven
+objeto de duda, por lo que los argumentos formales completos de
+corrección rara vez acompañan a los programas grandes. Dado que los
+programas grandes crecen a partir de los pequeños, es crucial que
+desarrollemos un arsenal de estructuras de programas estándar cuya
+corrección hayamos asegurado---los llamamos "modismos"---y aprendamos
+a combinarlos en estructuras más grandes utilizando técnicas
+organizativas de valor demostrado. Estas técnicas se tratan con
+detalle en este libro, y entenderlas es esencial para participar en la
+empresa prometeica llamada programación. Más que cualquier otra cosa,
+descubrir y dominar poderosas técnicas organizativas acelera nuestra
+capacidad para crear programas grandes y significativos. Por otro
+lado, como escribir programas grandes es muy agotador, nos estimulamos
+a inventar nuevos métodos para reducir la cantidad de funciones y
+detalles que se deben ajustar en programas grandes.
 
-Unlike programs, computers must obey the laws of physics.  If they wish to
-perform rapidly---a few nanoseconds per state change---they must transmit
-electrons only small distances (at most @math{1 {1\over2}} feet). The heat generated by
-the huge number of devices so concentrated in space has to be removed.  An
-exquisite engineering art has been developed balancing between multiplicity of
-function and density of devices.  In any event, hardware always operates at a
-level more primitive than that at which we care to program.  The processes that
-transform our Lisp programs to ``machine'' programs are themselves abstract
-models which we program.  Their study and creation give a great deal of insight
-into the organizational programs associated with programming arbitrary models.
-Of course the computer itself can be so modeled.  Think of it: the behavior of
-the smallest physical switching element is modeled by quantum mechanics
-described by differential equations whose detailed behavior is captured by
-numerical approximations represented in computer programs executing on
-computers composed of @dots{}!
+A diferencia de los programas, las computadoras deben obedecer las
+leyes de la física. Si desean funcionar rápidamente, unos pocos
+nanosegundos por cambio de estado, deben transmitir electrones solo a
+distancias cortas (como máximo @math{1 {1\over2}} pies). El calor
+generado por el gran número de dispositivos tan concentrados en el
+espacio debe ser eliminado. Se ha desarrollado una ingeniería
+exquisita que equilibra entre la multiplicidad de funciones y la
+densidad de dispositivos. En cualquier caso, el hardware siempre
+funciona a un nivel más primitivo que el que nos interesa programar.
+Los procesos que transforman nuestros programas Lisp en programas ``de
+máquina'' son ellos mismos modelos abstractos que programamos. Su
+estudio y creación dan una gran cantidad de información sobre los
+programas organizacionales asociados con la programación de modelos
+arbitrarios. Por supuesto, la computadora misma puede ser modelada de
+esta manera. Piense en ello: el comportamiento del elemento de
+conmutación física más pequeño se modela por la mecánica cuántica
+descrita por ecuaciones diferenciales cuyo comportamiento detallado es
+capturado por aproximaciones numéricas representadas en programas de
+computadora que se ejecutan en computadoras compuestas por @dots{}!
 
-It is not merely a matter of tactical convenience to separately identify the
-three foci.  Even though, as they say, it's all in the head, this logical
-separation induces an acceleration of symbolic traffic between these foci whose
-richness, vitality, and potential is exceeded in human experience only by the
-evolution of life itself.  At best, relationships between the foci are
-metastable.  The computers are never large enough or fast enough.  Each
-breakthrough in hardware technology leads to more massive programming
-enterprises, new organizational principles, and an enrichment of abstract
-models.  Every reader should ask himself periodically ``Toward what end, toward
-what end?''---but do not ask it too often lest you pass up the fun of
-programming for the constipation of bittersweet philosophy.
+No es simplemente una cuestión de conveniencia táctica separar los
+tres focos. Aunque, como dicen, todo está en la cabeza, esta
+separación lógica induce una aceleración del tráfico simbólico entre
+estos focos cuya riqueza, vitalidad y potencial solo es superada en la
+experiencia humana por la evolución de la vida misma. En el mejor de
+los casos, las relaciones entre los focos son metastables. Los
+ordenadores nunca son lo suficientemente grandes o rápidos. Cada
+avance en la tecnología de hardware conduce a empresas de programación
+más masivas, nuevos principios organizativos y un enriquecimiento de
+los modelos abstractos. Cada lector debería preguntarse periódicamente
+``¿Hacia qué fin, hacia qué fin?''---pero no lo pregunte con demasiada
+frecuencia para no perderse la diversión de programar por la
+constipación de la filosofía agridulce.
 
-Among the programs we write, some (but never enough) perform a precise
-mathematical function such as sorting or finding the maximum of a sequence of
-numbers, determining primality, or finding the square root.  We call such
-programs algorithms, and a great deal is known of their optimal behavior,
-particularly with respect to the two important parameters of execution time and
-data storage requirements.  A programmer should acquire good algorithms and
-idioms.  Even though some programs resist precise specifications, it is the
-responsibility of the programmer to estimate, and always to attempt to improve,
-their performance.
+Entre los programas que escribimos, algunos (pero nunca suficientes)
+realizan una función matemática precisa como la ordenación o búsqueda
+del máximo de una secuencia de números, determinar la primalidad o
+encontrar la raíz cuadrada. Llamamos a estos programas algoritmos, y
+se sabe mucho sobre su comportamiento óptimo, especialmente en lo que
+respecta a los dos parámetros importantes de tiempo de ejecución y
+requisitos de almacenamiento de datos. Un programador debe adquirir
+buenos algoritmos e idiomatismos. Aunque algunos programas resisten
+especificaciones precisas, es responsabilidad del programador estimar
+y siempre intentar mejorar su rendimiento.
 
-Lisp is a survivor, having been in use for about a quarter of a century.  Among
-the active programming languages only Fortran has had a longer life.  Both
-languages have supported the programming needs of important areas of
-application, Fortran for scientific and engineering computation and Lisp for
-artificial intelligence.  These two areas continue to be important, and their
-programmers are so devoted to these two languages that Lisp and Fortran may
-well continue in active use for at least another quarter-century.
+Lisp es un superviviente, ha estado en uso durante aproximadamente un
+cuarto de siglo. Entre los lenguajes de programación activos, solo
+Fortran ha tenido una vida más larga. Ambos lenguajes han apoyado las
+necesidades de programación de áreas importantes de aplicación,
+Fortran para el cálculo científico e ingenieril y Lisp para la
+inteligencia artificial. Estas dos áreas siguen siendo importantes, y
+sus programadores son tan devotos a estos dos lenguajes que Lisp y
+Fortran bien podrían continuar en uso activo durante al menos otro
+cuarto de siglo.
 
-Lisp changes.  The Scheme dialect used in this text has evolved from the
-original Lisp and differs from the latter in several important ways, including
-static scoping for variable binding and permitting functions to yield functions
-as values.  In its semantic structure Scheme is as closely akin to Algol 60 as
-to early Lisps.  Algol 60, never to be an active language again, lives on in
-the genes of Scheme and Pascal.  It would be difficult to find two languages
-that are the communicating coin of two more different cultures than those
-gathered around these two languages.  Pascal is for building
-pyramids---imposing, breathtaking, static structures built by armies pushing
-heavy blocks into place.  Lisp is for building organisms---imposing,
-breathtaking, dynamic structures built by squads fitting fluctuating myriads of
-simpler organisms into place.  The organizing principles used are the same in
-both cases, except for one extraordinarily important difference: The
-discretionary exportable functionality entrusted to the individual Lisp
-programmer is more than an order of magnitude greater than that to be found
-within Pascal enterprises.  Lisp programs inflate libraries with functions
-whose utility transcends the application that produced them.  The list, Lisp's
-native data structure, is largely responsible for such growth of utility.  The
-simple structure and natural applicability of lists are reflected in functions
-that are amazingly nonidiosyncratic.  In Pascal the plethora of declarable data
-structures induces a specialization within functions that inhibits and
-penalizes casual cooperation.  It is better to have 100 functions operate on
-one data structure than to have 10 functions operate on 10 data structures.  As
-a result the pyramid must stand unchanged for a millennium; the organism must
-evolve or perish.
+Lisp cambia. El dialecto Scheme utilizado en este texto ha
+evolucionado desde el Lisp original y difiere de este en varios
+aspectos importantes, incluyendo la vinculación de variables de ámbito
+estático y la posibilidad de que las funciones generen funciones como
+valores. En su estructura semántica, Scheme está tan estrechamente
+relacionado con Algol 60 como con los primeros Lisps. Algol 60, que
+nunca volverá a ser un lenguaje activo, vive en los genes de Scheme y
+Pascal. Sería difícil encontrar dos lenguajes que sean la moneda de
+comunicación de dos culturas más diferentes que las reunidas alrededor
+de estos dos lenguajes. Pascal es para construir
+pirámides---imponentes, impresionantes, estructuras estáticas
+construidas por ejércitos que empujan bloques pesados hacia su lugar.
+Lisp es para construir organismos---imponentes, impresionantes,
+estructuras dinámicas construidas por equipos que ajustan una miríada
+fluctuante de organismos más simples en su lugar. Los principios
+organizativos utilizados son los mismos en ambos casos, excepto por
+una diferencia extraordinariamente importante: la funcionalidad
+exportable discrecional confiada al programador individual de Lisp es
+más de un orden de magnitud mayor que la que se encuentra dentro de
+las empresas de Pascal. Los programas de Lisp inflan las bibliotecas
+con funciones cuya utilidad trasciende la aplicación que las produjo.
+La lista, la estructura de datos nativa de Lisp, es en gran parte
+responsable de dicho crecimiento de la utilidad. La estructura simple
+y la aplicabilidad natural de las listas se reflejan en funciones que
+son sorprendentemente no idiosincrásicas. En Pascal, la plétora de
+estructuras de datos declarables induce una especialización dentro de
+las funciones que inhibe y penaliza la cooperación casual. Es mejor
+tener 100 funciones que operen en una estructura de datos que tener 10
+funciones que operen en 10 estructuras de datos. Como resultado, la
+pirámide debe permanecer inalterada durante un milenio; el organismo
+debe evolucionar o perecer.
 
-To illustrate this difference, compare the treatment of material and exercises
-within this book with that in any first-course text using Pascal.  Do not labor
-under the illusion that this is a text digestible at @acronym{MIT} only,
-peculiar to the breed found there.  It is precisely what a serious book on
-programming Lisp must be, no matter who the student is or where it is used.
+Para ilustrar esta diferencia, compare el tratamiento de material y
+ejercicios dentro de este libro con el de cualquier texto de primer
+curso que utilice Pascal. No se engañe pensando que este es un texto
+digerible solo en @acronym{MIT}, peculiar de la raza que se encuentra
+allí. Es precisamente lo que debe ser un libro serio sobre
+programación Lisp, sin importar quién sea el estudiante o dónde se
+use.
 
-Note that this is a text about programming, unlike most Lisp books, which are
-used as a preparation for work in artificial intelligence.  After all, the
-critical programming concerns of software engineering and artificial
-intelligence tend to coalesce as the systems under investigation become larger.
-This explains why there is such growing interest in Lisp outside of artificial
-intelligence.
+Tenga en cuenta que este es un texto sobre programación, a diferencia
+de la mayoría de los libros de Lisp, que se utilizan como preparación
+para trabajar en inteligencia artificial. Después de todo, las
+preocupaciones críticas de la programación de ingeniería de software y
+la inteligencia artificial tienden a converger a medida que los
+sistemas bajo investigación se hacen más grandes. Esto explica por qué
+hay un interés cada vez mayor en Lisp fuera de la inteligencia
+artificial.
 
-As one would expect from its goals, artificial intelligence research generates
-many significant programming problems.  In other programming cultures this
-spate of problems spawns new languages.  Indeed, in any very large programming
-task a useful organizing principle is to control and isolate traffic within the
-task modules via the invention of language.  These languages tend to become
-less primitive as one approaches the boundaries of the system where we humans
-interact most often.  As a result, such systems contain complex
-language-processing functions replicated many times.  Lisp has such a simple
-syntax and semantics that parsing can be treated as an elementary task.  Thus
-parsing technology plays almost no role in Lisp programs, and the construction
-of language processors is rarely an impediment to the rate of growth and change
-of large Lisp systems.  Finally, it is this very simplicity of syntax and
-semantics that is responsible for the burden and freedom borne by all Lisp
-programmers.  No Lisp program of any size beyond a few lines can be written
-without being saturated with discretionary functions.  Invent and fit; have
-fits and reinvent!  We toast the Lisp programmer who pens his thoughts within
-nests of parentheses.
+Como uno podría esperar de sus objetivos, la investigación en
+inteligencia artificial genera muchos problemas de programación
+significativos. En otras culturas de programación, esta avalancha de
+problemas genera nuevos lenguajes. De hecho, en cualquier tarea de
+programación muy grande, un principio organizativo útil es controlar y
+aislar el tráfico dentro de los módulos de la tarea mediante la
+invención de un lenguaje. Estos lenguajes tienden a volverse menos
+primitivos a medida que uno se acerca a los límites del sistema donde
+los humanos interactuamos con más frecuencia. Como resultado, dichos
+sistemas contienen funciones de procesamiento de lenguaje complejas
+replicadas muchas veces. Lisp tiene una sintaxis y semántica tan
+simples que el análisis sintáctico se puede tratar como una tarea
+elemental. Por lo tanto, la tecnología de análisis sintáctico juega
+casi ningún papel en los programas Lisp y la construcción de
+procesadores de lenguaje rara vez es un obstáculo para la tasa de
+crecimiento y cambio de los grandes sistemas Lisp. Finalmente, es
+precisamente esta simplicidad de la sintaxis y semántica lo que es
+responsable de la carga y libertad que llevan todos los programadores
+Lisp. Ningún programa Lisp de ningún tamaño más allá de unas pocas
+líneas puede escribirse sin estar saturado de funciones
+discrecionales. ¡Inventa y ajusta; ten ajustes y reinventa! Brindamos
+por el programador Lisp que escribe sus pensamientos dentro de
+anidaciones de paréntesis.
 
 @sp 0.5
 @noindent
 Alan J. Perlis@*
 New Haven, Connecticut
 
-@unnumbered Preface to the Second Edition
+@unnumbered Prefacio a la Segunda Edición
 @node    Preface, Preface 1e, Foreword, Top
 
 @quotation
-Is it possible that software is not like anything else, that it is meant to be
-discarded: that the whole point is to always see it as a soap bubble?
+¿Es posible que el software no sea como cualquier otra cosa, que esté destinado a ser desechado: que el punto entero sea siempre verlo como una burbuja de jabón?
 
 ---Alan J. Perlis
 @end quotation
@@ -698,150 +751,177 @@ discarded: that the whole point is to always see it as a soap bubble?
 @c @sp 0.7
 
 @noindent
-\lettrine{T}{he material in this book} has been the basis of @acronym{MIT}'s entry-level
-computer science subject since 1980.  We had been teaching this material for
-four years when the first edition was published, and twelve more years have
-elapsed until the appearance of this second edition.  We are pleased that our
-work has been widely adopted and incorporated into other texts.  We have seen
-our students take the ideas and programs in this book and build them in as the
-core of new computer systems and languages.  In literal realization of an
-ancient Talmudic pun, our students have become our builders.  We are lucky to
-have such capable students and such accomplished builders.
+\lettrine{E}{l material de este libro} ha sido la base de la
+asignatura de ciencias de la computación de nivel de entrada del
+@acronym{MIT} desde 1980. Hemos estado enseñando este material durante
+cuatro años cuando se publicó la primera edición, y han pasado doce
+años más hasta la aparición de esta segunda edición. Nos complace que
+nuestro trabajo haya sido ampliamente adoptado e incorporado en otros
+textos. Hemos visto a nuestros estudiantes tomar las ideas y programas
+de este libro y construirlos como núcleo de nuevos sistemas y
+lenguajes de computación. En realización literal de un antiguo juego
+de palabras talmúdico, nuestros estudiantes se han convertido en
+nuestros constructores. Tenemos la suerte de tener estudiantes tan
+capaces y constructores tan experimentados.
 
-In preparing this edition, we have incorporated hundreds of clarifications
-suggested by our own teaching experience and the comments of colleagues at
-@acronym{MIT} and elsewhere.  We have redesigned most of the major programming
-systems in the book, including the generic-arithmetic system, the interpreters,
-the register-machine simulator, and the compiler; and we have rewritten all the
-program examples to ensure that any Scheme implementation conforming to the
-@acronym{IEEE} Scheme standard (@ref{IEEE 1990}) will be able to run the
-code.
+En la preparación de esta edición, hemos incorporado cientos de
+aclaraciones sugeridas por nuestra propia experiencia docente y los
+comentarios de colegas del @acronym{MIT} y otros lugares. Hemos
+rediseñado la mayoría de los principales sistemas de programación en
+el libro, incluyendo el sistema de aritmética genérica, los
+intérpretes, el simulador de máquina de registro y el compilador; y
+hemos reescrito todos los ejemplos de programas para garantizar que
+cualquier implementación de Scheme que cumpla con el estándar
+@acronym{IEEE} Scheme (@ref{IEEE 1990}) pueda ejecutar el código.
 
-This edition emphasizes several new themes.  The most important of these is the
-central role played by different approaches to dealing with time in
-computational models: objects with state, concurrent programming, functional
-programming, lazy evaluation, and nondeterministic programming.  We have
-included new sections on concurrency and nondeterminism, and we have tried to
-integrate this theme throughout the book.
+Esta edición enfatiza varios temas nuevos. El más importante de ellos
+es el papel central que desempeñan diferentes enfoques para tratar el
+tiempo en modelos computacionales: objetos con estado, programación
+concurrente, programación funcional, evaluación perezosa y
+programación no determinista. Hemos incluido nuevas secciones sobre
+concurrencia y no determinismo, y hemos tratado de integrar este tema
+en todo el libro.
 
-The first edition of the book closely followed the syllabus of our
-@acronym{MIT} one-semester subject.  With all the new material in the second
-edition, it will not be possible to cover everything in a single semester, so
-the instructor will have to pick and choose.  In our own teaching, we sometimes
-skip the section on logic programming (@ref{4.4}), we have students use
-the register-machine simulator but we do not cover its implementation (@ref{5.2}),
-and we give only a cursory overview of the compiler (@ref{5.5}).
-Even so, this is still an intense course.  Some instructors may
-wish to cover only the first three or four chapters, leaving the other material
-for subsequent courses.
+La primera edición del libro seguía de cerca el plan de estudios de
+nuestro semestre de materia en @acronym{MIT}. Con todo el material
+nuevo de la segunda edición, no será posible cubrir todo en un solo
+semestre, por lo que el instructor tendrá que seleccionar. En nuestra
+propia enseñanza, a veces saltamos la sección sobre programación
+lógica (@ref{4.4}), hacemos que los estudiantes usen el simulador de
+máquina registradora pero no cubrimos su implementación (@ref{5.2}), y
+damos solo una descripción general de la compiladora (@ref{5.5}). Aún
+así, este es un curso intenso. Algunos instructores pueden desear
+cubrir solo los primeros tres o cuatro capítulos, dejando el resto del
+material para cursos posteriores.
 
-The World-Wide-Web site @url{http://mitpress.mit.edu/sicp} provides
-support for users of this book.  This includes programs from the book, sample
-programming assignments, supplementary materials, and downloadable
-implementations of the Scheme dialect of Lisp.
+El sitio web @url{http://mitpress.mit.edu/sicp} proporciona soporte
+para los usuarios de este libro. Esto incluye programas del libro,
+asignaciones de programación de muestra, materiales suplementarios y
+implementaciones descargables del dialecto Scheme de Lisp.
 
-@unnumbered Preface to the First Edition
+@unnumbered Prefacio a la Primera Edición
 @node    Preface 1e, Acknowledgments, Preface, Top
 
 @c @sp -0.6
 @quotation
-A computer is like a violin.  You can imagine a novice trying first a
-phonograph and then a violin.  The latter, he says, sounds terrible.  That is
-the argument we have heard from our humanists and most of our computer
-scientists.  Computer programs are good, they say, for particular purposes, but
-they aren't flexible.  Neither is a violin, or a typewriter, until you learn
-how to use it.
+Una computadora es como un violín. Puedes imaginar a un novato
+intentando primero un fonógrafo y luego un violín. Este último, dice,
+suena terrible. Ese es el argumento que hemos escuchado de nuestros
+humanistas y la mayoría de nuestros científicos de la computación. Los
+programas de computadora son buenos, dicen, para propósitos
+particulares, pero no son flexibles. Tampoco lo es un violín, o una
+máquina de escribir, hasta que aprendes a usarlo.
 
----Marvin Minsky, ``Why Programming Is a Good Medium for Expressing
-Poorly-Understood and Sloppily-Formulated Ideas''
+---Marvin Minsky, "Por qué la programación es un buen medio para
+   expresar ideas mal entendidas y mal formuladas"
 @end quotation
 
 @c @sp 0.8
 
 @noindent
-\lettrine[lhang=0.17]{``T}{he Structure and Interpretation of Computer Programs''} is the entry-level
-subject in computer science at the Massachusetts Institute of Technology.  It
-is required of all students at @acronym{MIT} who major in electrical
-engineering or in computer science, as one-fourth of the ``common core
-curriculum,'' which also includes two subjects on circuits and linear systems
-and a subject on the design of digital systems.  We have been involved in the
-development of this subject since 1978, and we have taught this material in its
-present form since the fall of 1980 to between 600 and 700 students each year.
-Most of these students have had little or no prior formal training in
-computation, although many have played with computers a bit and a few have had
-extensive programming or hardware-design experience.
+\lettrine[lhang=0.17]{``L}{a Estructura y la Interpretación de los
+Programas de Computadora''} es el tema de nivel de entrada en ciencias
+de la computación en el Instituto de Tecnología de Massachusetts. Es
+obligatorio para todos los estudiantes de @acronym{MIT} que se
+especializan en ingeniería eléctrica o en ciencias de la computación,
+como una cuarta parte del ``ciclo básico común,'' que también incluye
+dos temas sobre circuitos y sistemas lineales y un tema sobre el
+diseño de sistemas digitales. Hemos estado involucrados en el
+desarrollo de este tema desde 1978 y hemos enseñado este material en
+su forma actual desde el otoño de 1980 a entre 600 y 700 estudiantes
+cada año. La mayoría de estos estudiantes han tenido poca o ninguna
+formación formal previa en computación, aunque muchos han jugado un
+poco con las computadoras y algunos tienen experiencia extensa en
+programación o diseño de hardware.
 
-Our design of this introductory computer-science subject reflects two major
-concerns.  First, we want to establish the idea that a computer language is not
-just a way of getting a computer to perform operations but rather that it is a
-novel formal medium for expressing ideas about methodology.  Thus, programs
-must be written for people to read, and only incidentally for machines to
-execute.  Second, we believe that the essential material to be addressed by a
-subject at this level is not the syntax of particular programming-language
-constructs, nor clever algorithms for computing particular functions
-efficiently, nor even the mathematical analysis of algorithms and the
-foundations of computing, but rather the techniques used to control the
-intellectual complexity of large software systems.
+Nuestro diseño de esta materia introductoria de ciencias de la
+computación refleja dos preocupaciones principales. En primer lugar,
+queremos establecer la idea de que un lenguaje de programación no es
+simplemente una forma de hacer que una computadora realice
+operaciones, sino que es un medio formal novedoso para expresar ideas
+sobre metodología. Por lo tanto, los programas deben estar escritos
+para que los humanos los lean, y solo incidentalmente para que las
+máquinas los ejecuten. En segundo lugar, creemos que el material
+esencial que debe abordar una materia en este nivel no es la sintaxis
+de construcciones de lenguajes de programación particulares, ni
+algoritmos ingeniosos para computar funciones particulares
+eficientemente, ni siquiera el análisis matemático de algoritmos y los
+fundamentos de la computación, sino más bien las técnicas utilizadas
+para controlar la complejidad intelectual de grandes sistemas de
+software.
 
-Our goal is that students who complete this subject should have a good feel for
-the elements of style and the aesthetics of programming.  They should have
-command of the major techniques for controlling complexity in a large
-system. They should be capable of reading a 50-page-long program, if it is
-written in an exemplary style. They should know what not to read, and what they
-need not understand at any moment.  They should feel secure about modifying a
-program, retaining the spirit and style of the original author.
+Nuestro objetivo es que los estudiantes que completen esta materia
+tengan una buena sensación de los elementos de estilo y estética de
+programación. Deben tener dominio de las principales técnicas para
+controlar la complejidad en un sistema grande. Deben ser capaces de
+leer un programa de 50 páginas, si está escrito en un estilo ejemplar.
+Deben saber qué no leer y lo que no necesitan entender en cada
+momento. Deben sentirse seguros al modificar un programa, manteniendo
+el espíritu y el estilo del autor original.
 
-These skills are by no means unique to computer programming.  The techniques we
-teach and draw upon are common to all of engineering design.  We control
-complexity by building abstractions that hide details when appropriate.  We
-control complexity by establishing conventional interfaces that enable us to
-construct systems by combining standard, well-understood pieces in a ``mix and
-match'' way.  We control complexity by establishing new languages for
-describing a design, each of which emphasizes particular aspects of the design
-and deemphasizes others.
+Estas habilidades no son exclusivas de la programación de
+computadoras. Las técnicas que enseñamos y utilizamos son comunes a
+todos los diseños de ingeniería. Controlamos la complejidad
+construyendo abstracciones que ocultan detalles cuando es apropiado.
+Controlamos la complejidad estableciendo interfaces convencionales que
+nos permiten construir sistemas combinando piezas estándar bien
+entendidas de manera de ``mezclar y combinar''. Controlamos la
+complejidad estableciendo nuevos lenguajes para describir un diseño,
+cada uno de los cuales enfatiza aspectos particulares del diseño y
+desestima otros.
 
-Underlying our approach to this subject is our conviction that ``computer
-science'' is not a science and that its significance has little to do with
-computers.  The computer revolution is a revolution in the way we think and in
-the way we express what we think.  The essence of this change is the emergence
-of what might best be called @newterm{procedural epistemology}---the study of
-the structure of knowledge from an imperative point of view, as opposed to the
-more declarative point of view taken by classical mathematical subjects.
-Mathematics provides a framework for dealing precisely with notions of ``what
-is.''  Computation provides a framework for dealing precisely with notions of
-``how to.''
+Subyacente a nuestro enfoque de este tema está nuestra convicción de
+que ``la ciencia de la computación'' no es una ciencia y que su
+importancia tiene poco que ver con las computadoras. La revolución
+informática es una revolución en la forma en que pensamos y en la
+forma en que expresamos lo que pensamos. La esencia de este cambio es
+la aparición de lo que podría llamarse mejor @newterm{epistemología
+procedimental}---el estudio de la estructura del conocimiento desde un
+punto de vista imperativo, en contraposición al punto de vista más
+declarativo tomado por las materias matemáticas clásicas. Las
+matemáticas proporcionan un marco para tratar con precisión nociones
+de "qué es". La computación proporciona un marco para tratar con
+precisión nociones de ``cómo hacer''.
 
-In teaching our material we use a dialect of the programming language Lisp.  We
-never formally teach the language, because we don't have to.  We just use it,
-and students pick it up in a few days.  This is one great advantage of
-Lisp-like languages: They have very few ways of forming compound expressions,
-and almost no syntactic structure.  All of the formal properties can be covered
-in an hour, like the rules of chess.  After a short time we forget about
-syntactic details of the language (because there are none) and get on with the
-real issues---figuring out what we want to compute, how we will decompose
-problems into manageable parts, and how we will work on the parts.  Another
-advantage of Lisp is that it supports (but does not enforce) more of the
-large-scale strategies for modular decomposition of programs than any other
-language we know.  We can make procedural and data abstractions, we can use
-higher-order functions to capture common patterns of usage, we can model local
-state using assignment and data mutation, we can link parts of a program with
-streams and delayed evaluation, and we can easily implement embedded languages.
-All of this is embedded in an interactive environment with excellent support
-for incremental program design, construction, testing, and debugging.  We thank
-all the generations of Lisp wizards, starting with John McCarthy, who have
-fashioned a fine tool of unprecedented power and elegance.
+En la enseñanza de nuestro material, usamos un dialecto del lenguaje
+de programación Lisp. Nunca enseñamos formalmente el lenguaje, porque
+no tenemos que hacerlo. Simplemente lo usamos, y los estudiantes lo
+aprenden en unos pocos días. Esta es una gran ventaja de los lenguajes
+similares a Lisp: tienen muy pocas formas de formar expresiones
+compuestas y casi ninguna estructura sintáctica. Todas las propiedades
+formales se pueden cubrir en una hora, como las reglas del ajedrez.
+Después de poco tiempo, olvidamos los detalles sintácticos del
+lenguaje (porque no hay ninguno) y nos ocupamos de los verdaderos
+problemas---averiguar qué queremos calcular, cómo descompondremos los
+problemas en partes manejables y cómo trabajaremos en las partes. Otra
+ventaja de Lisp es que soporta (pero no obliga) más estrategias de
+gran escala para la descomposición modular de programas que cualquier
+otro lenguaje que conozcamos. Podemos hacer abstracciones de
+procedimientos y datos, podemos usar funciones de orden superior para
+capturar patrones comunes de uso, podemos modelar el estado local
+usando asignación y mutación de datos, podemos vincular partes de un
+programa con flujos y evaluación retrasada, y podemos implementar
+fácilmente lenguajes incorporados. Todo esto está integrado en un
+entorno interactivo con excelente soporte para el diseño,
+construcción, prueba y depuración de programas incrementales.
+Agradecemos a todas las generaciones de expertos en Lisp, comenzando
+con John McCarthy, que han creado una herramienta excelente de poder y
+elegancia sin precedentes.
 
-Scheme, the dialect of Lisp that we use, is an attempt to bring together the
-power and elegance of Lisp and Algol.  From Lisp we take the metalinguistic
-power that derives from the simple syntax, the uniform representation of
-programs as data objects, and the garbage-collected heap-allocated data.  From
-Algol we take lexical scoping and block structure, which are gifts from the
-pioneers of programming-language design who were on the Algol committee.  We
-wish to cite John Reynolds and Peter Landin for their insights into the
-relationship of Church's λ-calculus to the structure of programming
-languages.  We also recognize our debt to the mathematicians who scouted out
-this territory decades before computers appeared on the scene.  These pioneers
-include Alonzo Church, Barkley Rosser, Stephen Kleene, and Haskell Curry.
+El lenguaje Scheme, un dialecto de Lisp que utilizamos, es un intento
+de unir la potencia y la elegancia de Lisp y Algol. De Lisp tomamos el
+poder metalingüístico que deriva de la sintaxis simple, la
+representación uniforme de programas como objetos de datos y la
+gestión automática de la memoria para los datos. De Algol, tomamos el
+alcance léxico y la estructura de bloque, que son dones de los
+pioneros del diseño de lenguajes de programación que formaban parte
+del comité de Algol. Queremos citar a John Reynolds y Peter Landin por
+sus ideas sobre la relación del cálculo lambda de Church con la
+estructura de los lenguajes de programación. También reconocemos
+nuestra deuda con los matemáticos que exploraron este territorio
+décadas antes de que aparecieran las computadoras. Estos pioneros
+incluyen a Alonzo Church, Barkley Rosser, Stephen Kleene y Haskell
+Curry.
 
 @unnumbered Acknowledgments
 @node       Acknowledgments, Chapter 1, Preface 1e, Top
