@@ -923,116 +923,134 @@ décadas antes de que aparecieran las computadoras. Estos pioneros
 incluyen a Alonzo Church, Barkley Rosser, Stephen Kleene y Haskell
 Curry.
 
-@unnumbered Acknowledgments
+@unnumbered Agradecimientos
 @node       Acknowledgments, Chapter 1, Preface 1e, Top
 
-\lettrine[findent=1pt]{W}{e would like to thank} the many people who have helped us develop this book and
-this curriculum.
+\lettrine[findent=1pt]{N}{os gustaría agradecer} a las muchas personas
+que nos han ayudado a desarrollar este libro y este plan de estudios.
 
-Our subject is a clear intellectual descendant of ``6.231,'' a wonderful
-subject on programming linguistics and the λ-calculus taught at
-@acronym{MIT} in the late 1960s by Jack Wozencraft and Arthur Evans, Jr.
+Nuestra materia es un claro descendiente intelectual de ``6.231'', una
+materia maravillosa sobre lingüística de programación y cálculo λ
+enseñada en @acronym{MIT} a finales de la década de 1960 por Jack
+Wozencraft y Arthur Evans, Jr.
 
-We owe a great debt to Robert Fano, who reorganized @acronym{MIT}'s
-introductory curriculum in electrical engineering and computer science to
-emphasize the principles of engineering design.  He led us in starting out on
-this enterprise and wrote the first set of subject notes from which this book
-evolved.
+Le debemos una gran deuda a Robert Fano, quien reorganizó el plan de
+estudios introductorio de ingeniería eléctrica y ciencias de la
+computación de @acronym{MIT} para enfatizar los principios del diseño
+de ingeniería. Él nos lideró en el inicio de esta empresa y escribió
+el primer conjunto de notas del tema a partir de las cuales evolucionó
+este libro.
 
-Much of the style and aesthetics of programming that we try to teach were
-developed in conjunction with Guy Lewis Steele Jr., who collaborated with
-Gerald Jay Sussman in the initial development of the Scheme language.  In
-addition, David Turner, Peter Henderson, Dan Friedman, David Wise, and Will
-Clinger have taught us many of the techniques of the functional programming
-community that appear in this book.
+Gran parte del estilo y la estética de programación que intentamos
+enseñar fueron desarrollados en conjunto con Guy Lewis Steele Jr.,
+quien colaboró con Gerald Jay Sussman en el desarrollo inicial del
+lenguaje Scheme. Además, David Turner, Peter Henderson, Dan Friedman,
+David Wise y Will Clinger nos han enseñado muchas de las técnicas de
+la comunidad de programación funcional que aparecen en este libro.
 
-Joel Moses taught us about structuring large systems.  His experience with the
-Macsyma system for symbolic computation provided the insight that one should
-avoid complexities of control and concentrate on organizing the data to reflect
-the real structure of the world being modeled.
+Joel Moses nos enseñó sobre la estructuración de sistemas grandes. Su
+experiencia con el sistema Macsyma para computación simbólica
+proporcionó la idea de que se debe evitar la complejidad del control y
+concentrarse en la organización de los datos para reflejar la
+verdadera estructura del mundo que se está modelando.
 
-Marvin Minsky and Seymour Papert formed many of our attitudes about programming
-and its place in our intellectual lives.  To them we owe the understanding that
-computation provides a means of expression for exploring ideas that would
-otherwise be too complex to deal with precisely.  They emphasize that a
-student's ability to write and modify programs provides a powerful medium in
-which exploring becomes a natural activity.
+Marvin Minsky y Seymour Papert formaron muchas de nuestras actitudes
+sobre la programación y su lugar en nuestras vidas intelectuales. A
+ellos les debemos la comprensión de que la computación proporciona un
+medio de expresión para explorar ideas que de otra manera serían
+demasiado complejas para tratar con precisión. Ellos enfatizan que la
+habilidad de un estudiante para escribir y modificar programas
+proporciona un medio poderoso en el que explorar se convierte en una
+actividad natural.
 
-We also strongly agree with Alan Perlis that programming is lots of fun and we
-had better be careful to support the joy of programming.  Part of this joy
-derives from observing great masters at work.  We are fortunate to have been
-apprentice programmers at the feet of Bill Gosper and Richard Greenblatt.
+También estamos completamente de acuerdo con Alan Perlis en que la
+programación es muy divertida y que debemos tener cuidado de apoyar la
+alegría de la programación. Parte de esta alegría proviene de observar
+a grandes maestros en acción. Tenemos la suerte de haber sido
+aprendices de programadores a los pies de Bill Gosper y Richard
+Greenblatt.
 
-It is difficult to identify all the people who have contributed to the
-development of our curriculum.  We thank all the lecturers, recitation
-instructors, and tutors who have worked with us over the past fifteen years and
-put in many extra hours on our subject, especially Bill Siebert, Albert Meyer,
-Joe Stoy, Randy Davis, Louis Braida, Eric Grimson, Rod Brooks, Lynn Stein and
-Peter Szolovits.  We would like to specially acknowledge the outstanding
-teaching contributions of Franklyn Turbak, now at Wellesley; his work in
-undergraduate instruction set a standard that we can all aspire to.  We are
-grateful to Jerry Saltzer and Jim Miller for helping us grapple with the
-mysteries of concurrency, and to Peter Szolovits and David McAllester for their
-contributions to the exposition of nondeterministic evaluation in @ref{Chapter
-4}.
+Es difícil identificar a todas las personas que han contribuido al
+desarrollo de nuestro plan de estudios. Agradecemos a todos los
+profesores, instructores de recitación y tutores que han trabajado con
+nosotros en los últimos quince años y han dedicado muchas horas
+adicionales a nuestra materia, especialmente a Bill Siebert, Albert
+Meyer, Joe Stoy, Randy Davis, Louis Braida, Eric Grimson, Rod Brooks,
+Lynn Stein y Peter Szolovits. Nos gustaría destacar especialmente las
+excelentes contribuciones docentes de Franklyn Turbak, ahora en
+Wellesley; su trabajo en la enseñanza universitaria estableció un
+estándar al que todos podemos aspirar. Estamos agradecidos a Jerry
+Saltzer y Jim Miller por ayudarnos a lidiar con los misterios de la
+concurrencia, y a Peter Szolovits y David McAllester por sus
+contribuciones a la exposición de la evaluación no determinista en el
+@ref{Chapter 4}.
 
-Many people have put in significant effort presenting this material at other
-universities.  Some of the people we have worked closely with are Jacob
-Katzenelson at the Technion, Hardy Mayer at the University of California at
-Irvine, Joe Stoy at Oxford, Elisha Sacks at Purdue, and Jan Komorowski at the
-Norwegian University of Science and Technology.  We are exceptionally proud of
-our colleagues who have received major teaching awards for their adaptations of
-this subject at other universities, including Kenneth Yip at Yale, Brian Harvey
-at the University of California at Berkeley, and Dan Huttenlocher at Cornell.
+Muchas personas han dedicado un esfuerzo significativo a presentar
+este material en otras universidades. Algunas de las personas con las
+que hemos trabajado de cerca son Jacob Katzenelson en el Technion,
+Hardy Mayer en la Universidad de California en Irvine, Joe Stoy en
+Oxford, Elisha Sacks en Purdue y Jan Komorowski en la Universidad
+Noruega de Ciencia y Tecnología. Estamos excepcionalmente orgullosos
+de nuestros colegas que han recibido importantes premios docentes por
+sus adaptaciones de esta materia en otras universidades, incluyendo a
+Kenneth Yip en Yale, Brian Harvey en la Universidad de California en
+Berkeley y Dan Huttenlocher en Cornell.
 
-Al Moy@'e arranged for us to teach this material to engineers at
-Hewlett-Packard, and for the production of videotapes of these lectures.  We
-would like to thank the talented instructors---in particular Jim Miller, Bill
-Siebert, and Mike Eisenberg---who have designed continuing education courses
-incorporating these tapes and taught them at universities and industry all over
-the world.
+Al Moy@'e organizó para que enseñemos este material a ingenieros de
+Hewlett-Packard y para la producción de videos de estas conferencias.
+Queremos agradecer a los talentosos instructores---en particular a Jim
+Miller, Bill Siebert y Mike Eisenberg---que han diseñado cursos de
+educación continua incorporando estos videos y los han enseñado en
+universidades e industrias de todo el mundo.
 
-Many educators in other countries have put in significant work translating the
-first edition.  Michel Briand, Pierre Chamard, and Andr@'e Pic produced a
-French edition; Susanne Daniels-Herold produced a German edition; and Fumio
-Motoyoshi produced a Japanese edition.  We do not know who produced the Chinese
-edition, but we consider it an honor to have been selected as the subject of an
-``unauthorized'' translation.
+Muchos educadores en otros países han dedicado un trabajo
+significativo a la traducción de la primera edición. Michel Briand,
+Pierre Chamard y André Pic produjeron una edición en francés; Susanne
+Daniels-Herold produjo una edición en alemán; y Fumio Motoyoshi
+produjo una edición en japonés. No sabemos quién produjo la edición en
+chino, pero consideramos un honor haber sido seleccionados como el
+tema de una traducción ``no autorizada''.
 
-It is hard to enumerate all the people who have made technical contributions to
-the development of the Scheme systems we use for instructional purposes.  In
-addition to Guy Steele, principal wizards have included Chris Hanson, Joe
-Bowbeer, Jim Miller, Guillermo Rozas, and Stephen Adams.  Others who have put
-in significant time are Richard Stallman, Alan Bawden, Kent Pitman, Jon Taft,
-Neil Mayle, John Lamping, Gwyn Osnos, Tracy Larrabee, George Carrette, Soma
-Chaudhuri, Bill Chiarchiaro, Steven Kirsch, Leigh Klotz, Wayne Noss, Todd Cass,
-Patrick O'Donnell, Kevin Theobald, Daniel Weise, Kenneth Sinclair, Anthony
-Courtemanche, Henry M. Wu, Andrew Berlin, and Ruth Shyu.
+Es difícil enumerar a todas las personas que han hecho contribuciones
+técnicas al desarrollo de los sistemas Scheme que usamos con fines
+educativos. Además de Guy Steele, los principales magos incluyen a
+Chris Hanson, Joe Bowbeer, Jim Miller, Guillermo Rozas y Stephen
+Adams. Otros que han dedicado un tiempo significativo son Richard
+Stallman, Alan Bawden, Kent Pitman, Jon Taft, Neil Mayle, John
+Lamping, Gwyn Osnos, Tracy Larrabee, George Carrette, Soma Chaudhuri,
+Bill Chiarchiaro, Steven Kirsch, Leigh Klotz, Wayne Noss, Todd Cass,
+Patrick O'Donnell, Kevin Theobald, Daniel Weise, Kenneth Sinclair,
+Anthony Courtemanche, Henry M. Wu, Andrew Berlin y Ruth Shyu.
 
-Beyond the @acronym{MIT} implementation, we would like to thank the many people
-who worked on the @acronym{IEEE} Scheme standard, including William Clinger and
-Jonathan Rees, who edited the @math{\rm R^4RS}, and Chris Haynes, David Bartley,
-Chris Hanson, and Jim Miller, who prepared the @acronym{IEEE} standard.
+Además de la implementación del @acronym{MIT}, nos gustaría agradecer
+a las muchas personas que trabajaron en el estándar Scheme de
+@acronym{IEEE}, incluyendo a William Clinger y Jonathan Rees, quienes
+editaron @math{\rm R^4RS}, y Chris Haynes, David Bartley, Chris Hanson
+y Jim Miller, quienes prepararon el estándar @acronym{IEEE}.
 
-Dan Friedman has been a long-time leader of the Scheme community.  The
-community's broader work goes beyond issues of language design to encompass
-significant educational innovations, such as the high-school curriculum based
-on EdScheme by Schemer's Inc., and the wonderful books by Mike Eisenberg and by
-Brian Harvey and Matthew Wright.
+Dan Friedman ha sido líder de la comunidad Scheme por mucho tiempo. El
+trabajo más amplio de la comunidad va más allá de los problemas de
+diseño del lenguaje para abarcar innovaciones educativas
+significativas, como el plan de estudios de secundaria basado en
+EdScheme de Schemer's Inc. y los maravillosos libros de Mike Eisenberg
+y Brian Harvey y Matthew Wright.
 
-We appreciate the work of those who contributed to making this a real book,
-especially Terry Ehling, Larry Cohen, and Paul Bethge at the @acronym{MIT}
-Press.  Ella Mazel found the wonderful cover image.  For the second edition we
-are particularly grateful to Bernard and Ella Mazel for help with the book
-design, and to David Jones, @TeX{} wizard extraordinaire.  We also are indebted
-to those readers who made penetrating comments on the new draft: Jacob
-Katzenelson, Hardy Mayer, Jim Miller, and especially Brian Harvey, who did unto
-this book as Julie did unto his book @cite{Simply Scheme}.
+Agradecemos el trabajo de quienes contribuyeron a hacer de este un
+libro real, especialmente Terry Ehling, Larry Cohen y Paul Bethge en
+@acronym{MIT} Press. Ella Mazel encontró la maravillosa imagen de la
+portada. Para la segunda edición, estamos particularmente agradecidos
+a Bernard y Ella Mazel por su ayuda con el diseño del libro, y a David
+Jones, el mago de @TeX{}. También estamos en deuda con aquellos
+lectores que hicieron comentarios penetrantes sobre el nuevo borrador:
+Jacob Katzenelson, Hardy Mayer, Jim Miller y especialmente Brian
+Harvey, quien hizo con este libro lo que Julie hizo con su libro
+@cite{Simply Scheme}.
 
-Finally, we would like to acknowledge the support of the organizations that
-have encouraged this work over the years, including support from
-Hewlett-Packard, made possible by Ira Goldstein and Joel Birnbaum, and support
-from @acronym{DARPA}, made possible by Bob Kahn.
+Finalmente, nos gustaría reconocer el apoyo de las organizaciones que
+han fomentado este trabajo a lo largo de los años, incluyendo el apoyo
+de Hewlett-Packard, posible gracias a Ira Goldstein y Joel Birnbaum, y
+el apoyo de @acronym{DARPA}, posible gracias a Bob Kahn.
+
 
 \mainmatter
 
