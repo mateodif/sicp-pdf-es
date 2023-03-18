@@ -1,7 +1,7 @@
 @comment
 @comment             **********************************************************
 @setfilename         sicp
-@settitle            Estructura e Interpretación de Programas de Computadora, 2ª ed.
+@settitle            Estructura e Interpretación de Programas Informáticos, 2ª ed.
 @comment             Formato no oficial de Texinfo
 @comment
 @set utfversion      3.mateo
@@ -101,7 +101,7 @@
 
 @sp 1.26
 @noindent
-Estructura e Interpretación de Programas de Computadora, segunda edición
+Estructura e Interpretación de Programas Informáticos, segunda edición
 
 @sp 1.26
 @noindent
@@ -147,7 +147,7 @@ basado en @url{http://www.neilvandyke.org/sicp-texi/, 2.neilvandyke4} (10 de ene
 
 @dircategory El Lenguaje Algorítmico Scheme
 @direntry
-* SICP: (sicp). Estructura e Interpretación de Programas de Computadora
+* SICP: (sicp). Estructura e Interpretación de Programas Informáticos
 @end direntry
 
 @macro newterm{término}
@@ -159,7 +159,7 @@ basado en @url{http://www.neilvandyke.org/sicp-texi/, 2.neilvandyke4} (10 de ene
 
 @titlepage
 @titlefont{Estructura e Interpretación}
-@title de Programas de Computadora
+@title de Programas Informáticos
 @subtitle Segunda Edición
 @subtitle Formato Texinfo no oficial @value{utfversion}
 @author Harold Abelson y Gerald Jay Sussman
@@ -175,7 +175,7 @@ basado en @url{http://www.neilvandyke.org/sicp-texi/, 2.neilvandyke4} (10 de ene
 
 @ifinfo
 
-@heading Estructura e Interpretación de Programas de Computadora
+@heading Estructura e Interpretación de Programas Informáticos
 
 @noindent
 Segunda Edición@*
@@ -195,11 +195,11 @@ Formato Texinfo no oficial versión @value{utfversion} (@value{utfversiondate})
 * Foreword::         Prólogo a la segunda edición
 * Preface 1e::       Prólogo a la primera edición
 * Acknowledgments::  Agradecimientos
-* Chapter 1::        Construyendo abstracciones con procedimientos
-* Chapter 2::        Construyendo abstracciones con datos
-* Chapter 3::        Modularidad, objetos y estado
-* Chapter 4::        Abstracción metalenguaje
-* Chapter 5::        Computación con máquinas de registro
+* Capítulo 1::        Construyendo abstracciones con procedimientos
+* Capítulo 2::        Construyendo abstracciones con datos
+* Capítulo 3::        Modularidad, objetos y estado
+* Capítulo 4::        Abstracción metalenguaje
+* Capítulo 5::        Computación con máquinas de registro
 * References::       Referencias
 * Index::            Índice
 
@@ -821,8 +821,8 @@ máquina de escribir, hasta que aprendes a usarlo.
 @c @sp 0.8
 
 @noindent
-\lettrine[lhang=0.17]{``L}{a Estructura y la Interpretación de los
-Programas de Computadora''} es el tema de nivel de entrada en ciencias
+\lettrine[lhang=0.17]{L}{a Estructura e Interpretación de
+Programas Informáticos} es el tema de nivel de entrada en ciencias
 de la computación en el Instituto de Tecnología de Massachusetts. Es
 obligatorio para todos los estudiantes de @acronym{MIT} que se
 especializan en ingeniería eléctrica o en ciencias de la computación,
@@ -926,7 +926,7 @@ incluyen a Alonzo Church, Barkley Rosser, Stephen Kleene y Haskell
 Curry.
 
 @unnumbered Agradecimientos
-@node       Acknowledgments, Chapter 1, Preface 1e, Top
+@node       Acknowledgments, Capítulo 1, Preface 1e, Top
 
 \lettrine[findent=1pt]{N}{os gustaría agradecer} a las muchas personas
 que nos han ayudado a desarrollar este libro y este plan de estudios.
@@ -985,7 +985,7 @@ estándar al que todos podemos aspirar. Estamos agradecidos a Jerry
 Saltzer y Jim Miller por ayudarnos a lidiar con los misterios de la
 concurrencia, y a Peter Szolovits y David McAllester por sus
 contribuciones a la exposición de la evaluación no determinista en el
-@ref{Chapter 4}.
+@ref{Capítulo 4}.
 
 Muchas personas han dedicado un esfuerzo significativo a presentar
 este material en otras universidades. Algunas de las personas con las
@@ -1057,7 +1057,7 @@ el apoyo de @acronym{DARPA}, posible gracias a Bob Kahn.
 \mainmatter
 
 @chapter Construyendo Abstracciones con Procedimientos
-@node    Chapter 1, Chapter 2, Acknowledgments, Top
+@node    Capítulo 1, Capítulo 2, Acknowledgments, Top
 
 @quotation
 Los actos de la mente, en los que ejerce su poder sobre ideas simples,
@@ -1243,7 +1243,7 @@ Lisp es muy divertido.
 @end menu
 
 @section Los Elementos de la Programación
-@node	1.1, 1.2, Chapter 1, Chapter 1
+@node	1.1, 1.2, Capítulo 1, Capítulo 1
 
 Un lenguaje de programación poderoso es más que una simple herramienta
 para instruir a una computadora para que realice tareas. El lenguaje
@@ -1434,10 +1434,10 @@ una expresión de esta forma:
 
 @lisp
 (+ (* 3
-(+ (* 2 4)
-(+ 3 5)))
-(+ (- 10 7)
-6))
+      (+ (* 2 4)
+         (+ 3 5)))
+   (+ (- 10 7)
+      6))
 @end lisp
 
 Siguiendo una convención de formato conocida como
@@ -1472,47 +1472,47 @@ provee para utilizar nombres para referirse a objetos computacionales.
 Decimos que el nombre identifica una @newterm{variable} cuyo
 @newterm{valor} es el objeto.
 
-En el dialecto Scheme de Lisp, nombramos cosas con @code{define}. Al
+En el dialecto Scheme de Lisp, nombramos cosas con @code{definir}. Al
 escribir
 
 @lisp
-(define size 2)
+(definir tamaño 2)
 @end lisp
 
 @noindent
-el intérprete asocia el valor 2 con el nombre @code{size}.@footnote{En
+el intérprete asocia el valor 2 con el nombre @code{tamaño}.@footnote{En
 este libro, no mostramos la respuesta del intérprete a la evaluación
 de definiciones, ya que esto depende en gran medida de la
-implementación.} Una vez que el nombre @code{size} ha sido asociado
+implementación.} Una vez que el nombre @code{tamaño} ha sido asociado
 con el número 2, podemos referirnos al valor 2 por su nombre:
 
 @lisp
-size
+tamaño
 @i{2}
 @end lisp
 
 @lisp
-(* 5 size)
+(* 5 tamaño)
 @i{10}
 @end lisp
 
 @noindent
-Aquí hay más ejemplos del uso de @code{define}:
+Aquí hay más ejemplos del uso de @code{definir}:
 
 @lisp
-(define pi 3.14159)
-(define radius 10)
-(* pi (* radius radius))
+(definir pi 3.14159)
+(definir radio 10)
+(* pi (* radio radio))
 @i{314.159}
-(define circumference (* 2 pi radius))
-circumference
+(definir circunferencia (* 2 pi radio))
+circunferencia
 @i{62.8318}
 @end lisp
 
 @noindent
-@code{define} es el medio más simple de abstracción en nuestro
+@code{definir} es el medio más simple de abstracción en nuestro
 lenguaje, ya que nos permite usar nombres simples para referirnos a
-los resultados de operaciones compuestas, como la @code{circumference}
+los resultados de operaciones compuestas, como la @code{circunferencia}
 calculada anteriormente. En general, los objetos computacionales
 pueden tener estructuras muy complejas, y sería extremadamente
 incómodo tener que recordar y repetir sus detalles cada vez que
@@ -1532,7 +1532,7 @@ mantener algún tipo de memoria que haga un seguimiento de los pares
 nombre-objeto. Esta memoria se llama el @newterm{entorno} (más
 precisamente, el @newterm{entorno global}, ya que veremos más adelante
 que una computación puede implicar varios entornos
-diferentes).@footnote{@ref{Chapter 3} mostrará que esta noción de
+diferentes).@footnote{@ref{Capítulo 3} mostrará que esta noción de
 entorno es crucial, tanto para comprender cómo funciona el intérprete
 como para implementar intérpretes.}
 
@@ -1587,7 +1587,7 @@ evaluar:
 requiere la aplicación de la regla de evaluación en cuatro
 combinaciones diferentes. Podemos obtener una imagen de este proceso
 representando la combinación en forma de un árbol, como se muestra en
-@ref{Figure 1.1}. Cada combinación está representada por un nodo con
+@ref{Figura 1.1}. Cada combinación está representada por un nodo con
 ramas correspondientes al operador y los operandos de la combinación
 que se originan a partir de él. Los nodos terminales (es decir, los
 nodos sin ramas que se originan a partir de ellos) representan
@@ -1602,7 +1602,7 @@ conocido como @newterm{acumulación de árboles}.
 
 @float
 @quotation
-@anchor{Figure 1.1}
+@anchor{Figura 1.1}
 @ifinfo
 @strong{Figura 1.1:} Representación de árbol, mostrando el valor de cada subcombinación.
 
@@ -1660,20 +1660,20 @@ símbolos en las expresiones. En un lenguaje interactivo como Lisp, no
 tiene sentido hablar del valor de una expresión como @code{(+ x 1)}
 sin especificar ninguna información sobre el entorno que proporcione
 un significado para el símbolo @code{x} (o incluso para el símbolo
-@code{+}). Como veremos en @ref{Chapter 3}, la noción general del
+@code{+}). Como veremos en @ref{Capítulo 3}, la noción general del
 entorno como proveedor de un contexto en el que tiene lugar la
 evaluación jugará un papel importante en nuestra comprensión de la
 ejecución del programa.
 
 Observa que la regla de evaluación dada arriba no maneja definiciones.
-Por ejemplo, la evaluación de @code{(define x 3)} no aplica
-@code{define} a dos argumentos, uno de los cuales es el valor del
-símbolo @code{x} y el otro es 3, ya que el propósito de @code{define}
+Por ejemplo, la evaluación de @code{(definir x 3)} no aplica
+@code{definir} a dos argumentos, uno de los cuales es el valor del
+símbolo @code{x} y el otro es 3, ya que el propósito de @code{definir}
 es precisamente asociar @code{x} con un valor. (Es decir,
-@code{(define x 3)} no es una combinación).
+@code{(definir x 3)} no es una combinación).
 
 Tales excepciones a la regla general de evaluación se llaman
-@newterm{formas especiales}. @code{define} es el único ejemplo de una
+@newterm{formas especiales}. @code{definir} es el único ejemplo de una
 forma especial que hemos visto hasta ahora, pero pronto veremos otras.
 Cada forma especial tiene su propia regla de evaluación. Los diversos
 tipos de expresiones (cada uno con su regla de evaluación asociada)
@@ -1731,28 +1731,28 @@ Podríamos decir: ``Para elevar algo al cuadrado, multiplícalo por sí
 mismo''. Esto se expresa en nuestro lenguaje como
 
 @lisp
-(define (square x) (* x x))
+(definir (cuadrado x) (* x x))
 @end lisp
 
 @noindent
 Podemos entender esto de la siguiente manera:
 
 @lisp
-(define  (square             x)       (*        x    x))
+(definir  (cuadrado          x)       (*        x    x))
 |           |                |         |        |
 Para     elevar al cuadrado algo, multiplícalo por sí mismo.
 @end lisp
 
 @noindent
 Aquí tenemos un @newterm{procedimiento compuesto}, al que se le ha
-dado el nombre de @code{square}. El procedimiento representa la
+dado el nombre de @code{cuadrado}. El procedimiento representa la
 operación de multiplicar algo por sí mismo. La cosa a multiplicar se
 le da un nombre local, @code{x}, que desempeña el mismo papel que un
 pronombre en el lenguaje natural. Al evaluar la definición, se crea
 este procedimiento compuesto y se le asocia el nombre
-@code{square}.@footnote{Obsérvese que hay dos operaciones diferentes
+@code{cuadrado}.@footnote{Obsérvese que hay dos operaciones diferentes
 que se combinan aquí: estamos creando el procedimiento y le estamos
-dando el nombre @code{square}. Es posible, de hecho importante, poder
+dando el nombre @code{cuadrado}. Es posible, de hecho importante, poder
 separar estas dos ideas---crear procedimientos sin nombrarlos y dar
 nombres a procedimientos que ya han sido creados. Veremos cómo hacer
 esto en @ref{1.3.2}.}
@@ -1760,7 +1760,7 @@ esto en @ref{1.3.2}.}
 La forma general de una definición de procedimiento es
 
 @lisp
-(define (@math{\langle}@var{nombre}@math{\kern0.03em\rangle} @math{\langle}@var{parámetros formales}@math{\kern0.02em\rangle})
+(definir (@math{\langle}@var{nombre}@math{\kern0.03em\rangle} @math{\langle}@var{parámetros formales}@math{\kern0.02em\rangle})
   @math{\langle\kern0.08em}@var{cuerpo}@math{\rangle})
 @end lisp
 
@@ -1788,45 +1788,45 @@ valor de la aplicación del procedimiento.} El
 agrupan dentro de paréntesis, tal como lo estarían en una llamada real
 al procedimiento que se está definiendo.
 
-Habiendo definido @code{square}, ahora podemos usarlo:
+Habiendo definido @code{cuadrado}, ahora podemos usarlo:
 
 @lisp
-(square 21)
+(cuadrado 21)
 @i{441}
-(square (+ 2 5))
+(cuadrado (+ 2 5))
 @i{49}
-(square (square 3))
+(cuadrado (cuadrado 3))
 @i{81}
 @end lisp
 
 @noindent
-También podemos usar @code{square} como un bloque de construcción para
+También podemos usar @code{cuadrado} como un bloque de construcción para
 definir otros procedimientos. Por ejemplo, @math{x^2 + y^2} se puede
 expresar como:
 
 @lisp
-(+ (square x) (square y))
+(+ (cuadrado x) (cuadrado y))
 @end lisp
 
 @noindent
-Podemos definir fácilmente un procedimiento @code{sum-of-squares} que,
+Podemos definir fácilmente un procedimiento @code{suma-de-cuadrados} que,
 dado cualquier par de números como argumentos, produzca la suma de sus
 cuadrados:
 
 @lisp
-(define (sum-of-squares x y)
-  (+ (square x) (square y)))
-(sum-of-squares 3 4)
+(definir (suma-de-cuadrados x y)
+  (+ (cuadrado x) (cuadrado y)))
+(suma-de-cuadrados 3 4)
 @i{25}
 @end lisp
 
 @noindent
-Ahora podemos usar @code{sum-of-squares} como un bloque de
+Ahora podemos usar @code{suma-de-cuadrados} como un bloque de
 construcción en la construcción de procedimientos adicionales:
 
 @lisp
-(define (f a)
-  (sum-of-squares (+ a 1) (* a 2)))
+(definir (f a)
+  (suma-de-cuadrados (+ a 1) (* a 2)))
 (f 5)
 @i{136}
 @end lisp
@@ -1834,146 +1834,157 @@ construcción en la construcción de procedimientos adicionales:
 @noindent
 Los procedimientos compuestos se usan exactamente de la misma manera
 que los procedimientos primitivos. De hecho, no se podría decir al ver
-la definición de @code{sum-of-squares} dada anteriormente si
-@code{square} está incorporado en el intérprete, como @code{+} y
+la definición de @code{suma-de-cuadrados} dada anteriormente si
+@code{cuadrado} está incorporado en el intérprete, como @code{+} y
 @code{*}, o si se definió como un procedimiento compuesto.
 
-@subsection The Substitution Model for Procedure Application
+@subsection El Modelo de Sustitución para la Aplicación de Procedimientos
 @node	1.1.5, 1.1.6, 1.1.4, 1.1
 
-To evaluate a combination whose operator names a compound procedure, the
-interpreter follows much the same process as for combinations whose operators
-name primitive procedures, which we described in @ref{1.1.3}.  That is,
-the interpreter evaluates the elements of the combination and applies the
-procedure (which is the value of the operator of the combination) to the
-arguments (which are the values of the operands of the combination).
+Para evaluar una combinación cuyo operador nombra un procedimiento
+compuesto, el intérprete sigue un proceso muy similar al de las
+combinaciones cuyos operadores nombran procedimientos primitivos, que
+describimos en @ref{1.1.3}. Es decir, el intérprete evalúa los
+elementos de la combinación y aplica el procedimiento (que es el valor
+del operador de la combinación) a los argumentos (que son los valores
+de los operandos de la combinación).
 
-We can assume that the mechanism for applying primitive procedures to arguments
-is built into the interpreter.  For compound procedures, the application
-process is as follows:
+Podemos asumir que el mecanismo para aplicar procedimientos primitivos
+a los argumentos está integrado en el intérprete. Para procedimientos
+compuestos, el proceso de aplicación es el siguiente:
 
 @quotation
-To apply a compound procedure to arguments, evaluate the body of the procedure
-with each formal parameter replaced by the corresponding argument.
+Para aplicar un procedimiento compuesto a los argumentos, se evalúa el
+cuerpo del procedimiento con cada parámetro formal reemplazado por el
+argumento correspondiente.
 @end quotation
 
 @noindent
-To illustrate this process, let's evaluate the combination
+Para ilustrar este proceso, evaluemos la combinación
 
 @lisp
 (f 5)
 @end lisp
 
 @noindent
-where @code{f} is the procedure defined in @ref{1.1.4}.  We begin by
-retrieving the body of @code{f}:
+donde @code{f} es el procedimiento definido en @ref{1.1.4}. Comenzamos
+recuperando el cuerpo de @code{f}:
 
 @lisp
-(sum-of-squares (+ a 1) (* a 2))
+(suma-de-cuadrados (+ a 1) (* a 2))
 @end lisp
 
 @noindent
-Then we replace the formal parameter @code{a} by the argument 5:
+Luego reemplazamos el parámetro formal @code{a} por el argumento 5:
 
 @lisp
-(sum-of-squares (+ 5 1) (* 5 2))
+(suma-de-cuadrados (+ 5 1) (* 5 2))
 @end lisp
 
 @noindent
-Thus the problem reduces to the evaluation of a combination with two operands
-and an operator @code{sum-of-squares}.  Evaluating this combination involves
-three subproblems.  We must evaluate the operator to get the procedure to be
-applied, and we must evaluate the operands to get the arguments.  Now @code{(+
-5 1)} produces 6 and @code{(* 5 2)} produces 10, so we must apply the
-@code{sum-of-squares} procedure to 6 and 10.  These values are substituted for
-the formal parameters @code{x} and @code{y} in the body of
-@code{sum-of-squares}, reducing the expression to
+Así, el problema se reduce a la evaluación de una combinación con dos
+operandos y un operador @code{suma-de-cuadrados}. Evaluar esta
+combinación implica tres subproblemas. Debemos evaluar el operador
+para obtener el procedimiento a aplicar, y debemos evaluar los
+operandos para obtener los argumentos. Ahora, @code{(+ 5 1)} produce 6
+y @code{(* 5 2)} produce 10, por lo que debemos aplicar el
+procedimiento @code{suma-de-cuadrados} a 6 y 10. Estos valores se
+sustituyen por los parámetros formales @code{x} e @code{y} en el
+cuerpo de @code{suma-de-cuadrados}, reduciendo la expresión a
 
 @lisp
-(+ (square 6) (square 10))
+(+ (cuadrado 6) (cuadrado 10))
 @end lisp
 
 @noindent
-If we use the definition of @code{square}, this reduces to
+Si usamos la definición de @code{cuadrado}, esto se reduce a
 
 @lisp
 (+ (* 6 6) (* 10 10))
 @end lisp
 
 @noindent
-which reduces by multiplication to
+que se reduce por multiplicación a
 
 @lisp
 (+ 36 100)
 @end lisp
 
 @noindent
-and finally to
+y finalmente a
 
 @lisp
 136
 @end lisp
 
 @noindent
-The process we have just described is called the @newterm{substitution model}
-for procedure application.  It can be taken as a model that determines the
-``meaning'' of procedure application, insofar as the procedures in this chapter
-are concerned.  However, there are two points that should be stressed:
+El proceso que acabamos de describir se llama el @newterm{modelo de
+sustitución} para la aplicación de procedimientos. Se puede tomar como
+un modelo que determina el ``significado'' de la aplicación de
+procedimientos, en la medida en que se refiere a los procedimientos en
+este capítulo. Sin embargo, hay dos puntos que deben destacarse:
 
 @itemize @bullet
 
 @item
-The purpose of the substitution is to help us think about procedure
-application, not to provide a description of how the interpreter really works.
-Typical interpreters do not evaluate procedure applications by manipulating the
-text of a procedure to substitute values for the formal parameters.  In
-practice, the ``substitution'' is accomplished by using a local environment for
-the formal parameters.  We will discuss this more fully in @ref{Chapter 3} and
-@ref{Chapter 4} when we examine the implementation of an interpreter in detail.
+El propósito de la sustitución es ayudarnos a pensar sobre la
+aplicación de procedimientos, no proporcionar una descripción de cómo
+funciona realmente el intérprete. Los intérpretes típicos no evalúan
+aplicaciones de procedimientos manipulando el texto de un
+procedimiento para sustituir valores en los parámetros formales. En la
+práctica, la ``sustitución'' se realiza utilizando un entorno local para
+los parámetros formales. Discutiremos esto más completamente en
+@ref{Capítulo 3} y @ref{Capítulo 4} cuando examinemos la
+implementación de un intérprete en detalle.
 
 @item
-Over the course of this book, we will present a sequence of increasingly
-elaborate models of how interpreters work, culminating with a complete
-implementation of an interpreter and compiler in @ref{Chapter 5}.  The
-substitution model is only the first of these models---a way to get started
-thinking formally about the evaluation process.  In general, when modeling
-phenomena in science and engineering, we begin with simplified, incomplete
-models.  As we examine things in greater detail, these simple models become
-inadequate and must be replaced by more refined models.  The substitution model
-is no exception.  In particular, when we address in @ref{Chapter 3} the use of
-procedures with ``mutable data,'' we will see that the substitution model
-breaks down and must be replaced by a more complicated model of procedure
-application.@footnote{Despite the simplicity of the substitution idea, it turns
-out to be surprisingly complicated to give a rigorous mathematical definition
-of the substitution process.  The problem arises from the possibility of
-confusion between the names used for the formal parameters of a procedure and
-the (possibly identical) names used in the expressions to which the procedure
-may be applied.  Indeed, there is a long history of erroneous definitions of
-@newterm{substitution} in the literature of logic and programming semantics.
-See @ref{Stoy 1977} for a careful discussion of substitution.}
+A lo largo de este libro, presentaremos una secuencia de modelos cada
+vez más elaborados sobre cómo funcionan los intérpretes, culminando
+con una implementación completa de un intérprete y compilador en
+@ref{Capítulo 5}. El modelo de sustitución es solo el primero de estos
+modelos, una manera de empezar a pensar formalmente sobre el proceso
+de evaluación. En general, al modelar fenómenos en ciencia e
+ingeniería, comenzamos con modelos simplificados e incompletos. A
+medida que examinamos las cosas con mayor detalle, estos modelos
+simples se vuelven inadecuados y deben ser reemplazados por modelos
+más refinados. El modelo de sustitución no es una excepción. En
+particular, cuando abordamos en @ref{Capítulo 3} el uso de
+procedimientos con ``datos mutables'', veremos que el modelo de
+sustitución se descompone y debe ser reemplazado por un modelo de
+aplicación de procedimiento más complicado. @footnote{A pesar de la
+simplicidad de la idea de la sustitución, resulta sorprendentemente
+complicado dar una definición matemática rigurosa del proceso de
+sustitución. El problema surge de la posibilidad de confusión entre
+los nombres utilizados para los parámetros formales de un
+procedimiento y los nombres (posiblemente idénticos) utilizados en las
+expresiones a las que se puede aplicar el procedimiento. De hecho,
+existe una larga historia de definiciones erróneas de
+@newterm{substitución} en la literatura de lógica y semántica de
+programación. Consulte @ref{Stoy 1977} para obtener una discusión
+detallada de la sustitución.}
 
 @end itemize
+@subsubheading Orden aplicativo versus orden normal
 
-@subsubheading Applicative order versus normal order
-
-According to the description of evaluation given in @ref{1.1.3}, the
-interpreter first evaluates the operator and operands and then applies the
-resulting procedure to the resulting arguments.  This is not the only way to
-perform evaluation.  An alternative evaluation model would not evaluate the
-operands until their values were needed.  Instead it would first substitute
-operand expressions for parameters until it obtained an expression involving
-only primitive operators, and would then perform the evaluation.  If we used
-this method, the evaluation of @code{(f 5)} would proceed according to the
-sequence of expansions
+Según la descripción de la evaluación dada en @ref{1.1.3}, el
+intérprete primero evalúa el operador y los operandos y luego aplica
+el procedimiento resultante a los argumentos resultantes. Este no es
+el único método para realizar la evaluación. Un modelo de evaluación
+alternativo no evaluaría los operandos hasta que se necesitaran sus
+valores. En cambio, primero sustituiría las expresiones de los
+operandos por parámetros hasta obtener una expresión que involucre
+solo operadores primitivos, y luego realizaría la evaluación. Si
+usáramos este método, la evaluación de @code{(f 5)} procedería según
+la secuencia de expansiones:
 
 @lisp
-(sum-of-squares (+ 5 1) (* 5 2))
-(+   (square (+ 5 1))      (square (* 5 2))  )
+(suma-de-cuadrados (+ 5 1) (* 5 2))
+(+   (cuadrado (+ 5 1))      (cuadrado (* 5 2))  )
 (+   (* (+ 5 1) (+ 5 1))   (* (* 5 2) (* 5 2)))
 @end lisp
 
 @noindent
-followed by the reductions
+seguido por las reducciones
 
 @lisp
 (+      (* 6 6)      (* 10 10))
@@ -1982,76 +1993,85 @@ followed by the reductions
 @end lisp
 
 @noindent
-This gives the same answer as our previous evaluation model, but the process is
-different.  In particular, the evaluations of @code{(+ 5 1)} and @code{(* 5 2)}
-are each performed twice here, corresponding to the reduction of the expression
-@code{(* x x)} with @code{x} replaced respectively by @code{(+ 5 1)} and
-@code{(* 5 2)}.
+Esto da la misma respuesta que nuestro modelo de evaluación anterior,
+pero el proceso es diferente. En particular, las evaluaciones de
+@code{(+ 5 1)} y @code{(* 5 2)} se realizan dos veces cada una aquí,
+correspondiendo a la reducción de la expresión @code{(* x x)} con
+@code{x} reemplazada respectivamente por @code{(+ 5 1)} y @code{(* 5
+2)}.
 
-This alternative ``fully expand and then reduce'' evaluation method is known as
-@newterm{normal-order evaluation}, in contrast to the ``evaluate the arguments
-and then apply'' method that the interpreter actually uses, which is called
-@newterm{applicative-order evaluation}.  It can be shown that, for procedure
-applications that can be modeled using substitution (including all the
-procedures in the first two chapters of this book) and that yield legitimate
-values, normal-order and applicative-order evaluation produce the same value.
-(See @ref{Exercise 1.5} for an instance of an ``illegitimate'' value where
-normal-order and applicative-order evaluation do not give the same result.)
+Este método de evaluación alternativo de ``expandir completamente y
+luego reducir'' se conoce como @newterm{orden normal de evaluación}, en
+contraste con el método de ``evaluar los argumentos y luego aplicar''
+que el intérprete realmente utiliza, que se llama @newterm{orden
+aplicativo de evaluación}. Se puede demostrar que, para aplicaciones
+de procedimientos que se pueden modelar mediante la sustitución
+(incluidos todos los procedimientos en los primeros dos capítulos de
+este libro) y que produzcan valores legítimos, la evaluación de orden
+normal y la evaluación de orden aplicativo producen el mismo valor.
+(Consulte @ref{Exercise 1.5} para una instancia de un valor
+"ilegítimo" donde la evaluación de orden normal y la evaluación de
+orden aplicativo no dan el mismo resultado).
 
-Lisp uses applicative-order evaluation, partly because of the additional
-efficiency obtained from avoiding multiple evaluations of expressions such as
-those illustrated with @code{(+ 5 1)} and @code{(* 5 2)} above and, more
-significantly, because normal-order evaluation becomes much more complicated to
-deal with when we leave the realm of procedures that can be modeled by
-substitution.  On the other hand, normal-order evaluation can be an extremely
-valuable tool, and we will investigate some of its implications in @ref{Chapter
-3} and @ref{Chapter 4}.@footnote{In @ref{Chapter 3} we will introduce
-@newterm{stream processing}, which is a way of handling apparently ``infinite''
-data structures by incorporating a limited form of normal-order evaluation.  In
-@ref{4.2} we will modify the Scheme interpreter to produce a
-normal-order variant of Scheme.}
+Lisp utiliza la evaluación por orden aplicativo, en parte debido a la
+eficiencia adicional que se obtiene al evitar múltiples evaluaciones
+de expresiones como las ilustradas con @code{(+ 5 1)} y @code{(* 5 2)}
+anteriormente, y, más significativamente, porque la evaluación por
+orden normal se vuelve mucho más complicada de manejar cuando salimos
+del ámbito de los procedimientos que pueden ser modelados por
+sustitución. Por otro lado, la evaluación por orden normal puede ser
+una herramienta extremadamente valiosa, y examinaremos algunas de sus
+implicaciones en @ref{Capítulo 3} y @ref{Capítulo 4}. @footnote{En
+@ref{Capítulo 3} introduciremos el @newterm{procesamiento de
+secuencias}, que es una forma de manejar estructuras de datos
+aparentemente ``infinitas'' incorporando una forma limitada de
+evaluación por orden normal. En @ref{4.2} modificaremos el intérprete
+de Scheme para producir una variante de Scheme con evaluación por
+orden normal.}
 
-@subsection Conditional Expressions and Predicates
-@node	1.1.6, 1.1.7, 1.1.5, 1.1
+@subsection Expresiones condicionales y predicados
+@node 1.1.6, 1.1.7, 1.1.5, 1.1
 
-The expressive power of the class of procedures that we can define at this
-point is very limited, because we have no way to make tests and to perform
-different operations depending on the result of a test.  For instance, we
-cannot define a procedure that computes the absolute value of a number by
-testing whether the number is positive, negative, or zero and taking different
-actions in the different cases according to the rule
+El poder expresivo de la clase de procedimientos que podemos definir
+en este punto es muy limitado, ya que no tenemos forma de hacer
+pruebas y realizar diferentes operaciones dependiendo del resultado de
+una prueba. Por ejemplo, no podemos definir un procedimiento que
+calcule el valor absoluto de un número probando si el número es
+positivo, negativo o cero y tomando diferentes acciones en los
+diferentes casos según la regla
 @ifinfo
 
 @example
       /
-      |   x  if x > 0
-|x| = <   0  if x = 0
-      |  -x  if x < 0
+      |   x  si x > 0
+|x| = <   0  si x = 0
+      |  -x  si x < 0
       \
 @end example
 
 @end ifinfo
 @tex
 $$
- |x| = \left\{ \begin{array}{r@{\quad \mathrm{if} \quad}l}
+ |x| = \left\{ \begin{array}{r@{\quad \mathrm{si} \quad}l}
         x  &  x > 0, \\
 	0  &  x = 0, \\
   \!\! -x  &  x < 0. \end{array} \right.
 $$
 @end tex
-This construct is called a @newterm{case analysis}, and there is a special form
-in Lisp for notating such a case analysis.  It is called @code{cond} (which
-stands for ``conditional''), and it is used as follows:
+Esta construcción se llama un @newterm{análisis de casos}, y hay una
+forma especial en Lisp para notar dicha análisis de casos. Se llama
+@code{cond} (que significa ``condicional''), y se usa de la siguiente
+manera:
 
 @lisp
-(define (abs x)
+(definir (abs x)
   (cond ((> x 0) x)
         ((= x 0) 0)
         ((< x 0) (- x))))
 @end lisp
 
 @noindent
-The general form of a conditional expression is
+La forma general de una expresión condicional es
 
 @lisp
 (cond (@math{\langle}@var{p}@math{_{\mono{1}}\rangle} @math{\langle}@var{e}@math{_{\mono{1}}\rangle})
@@ -2061,154 +2081,174 @@ The general form of a conditional expression is
 @end lisp
 
 @noindent
-consisting of the symbol @code{cond} followed by parenthesized pairs of
-expressions
+que consiste en el símbolo @code{cond} seguido de pares de expresiones
+entre paréntesis
 
 @lisp
 (@math{\langle}@var{p}@math{\rangle} @math{\langle}@var{e}@math{\rangle})
 @end lisp
 
 @noindent
-called @newterm{clauses}. The first expression in each pair is a
-@newterm{predicate}---that is, an expression whose value is interpreted as
-either true or false.@footnote{``Interpreted as either true or false'' means
-this: In Scheme, there are two distinguished values that are denoted by the
-constants @code{\#t} and @code{\#f}.  When the interpreter checks a predicate's
-value, it interprets @code{\#f} as false.  Any other value is treated as true.
-(Thus, providing @code{\#t} is logically unnecessary, but it is convenient.)  In
-this book we will use names @code{true} and @code{false}, which are associated
-with the values @code{\#t} and @code{\#f} respectively.}
+llamados @newterm{cláusulas}. La primera expresión de cada par es un
+@newterm{predicado}---es decir, una expresión cuyo valor se interpreta
+como verdadero o falso. @footnote{``Interpretado como verdadero o
+falso'' significa esto: En Scheme, hay dos valores distinguidos que se
+denotan por las constantes @code{\#t} y @code{\#f}. Cuando el intérprete
+verifica el valor de un predicado, interpreta @code{\#f} como falso.
+Cualquier otro valor se trata como verdadero. (Así, proporcionar
+@code{\#t} es lógicamente innecesario, pero es conveniente.) En este
+libro usaremos los nombres @code{true} y @code{false}, que están
+asociados con los valores @code{\#t} y @code{\#f}, respectivamente.}
 
-Conditional expressions are evaluated as follows.  The predicate @math{\langle{p_1}\rangle} is
-evaluated first.  If its value is false, then @math{\langle{p_2}\rangle} is evaluated.  If
-@math{\langle{p_2}\rangle}'s value is also false, then @math{\langle{p_3}\rangle} is evaluated.  This process
-continues until a predicate is found whose value is true, in which case the
-interpreter returns the value of the corresponding @newterm{consequent
-expression} @math{\langle{e}\rangle} of the clause as the value of the conditional expression.
-If none of the @math{\langle{p}\rangle}'s is found to be true, the value of the @code{cond} is
-undefined.
+Las expresiones condicionales se evalúan de la siguiente manera.
+Primero se evalúa el predicado @math{\langle{p_1}\rangle}. Si su valor
+es falso, entonces se evalúa @math{\langle{p_2}\rangle}. Si el valor
+de @math{\langle{p_2}\rangle} también es falso, entonces se evalúa
+@math{\langle{p_3}\rangle}. Este proceso continúa hasta que se
+encuentra un predicado cuyo valor es verdadero, en cuyo caso el
+intérprete devuelve el valor de la @newterm{expresión consecuente}
+correspondiente @math{\langle{e}\rangle} de la cláusula como el valor
+de la expresión condicional. Si ninguno de los
+@math{\langle{p}\rangle}'s se encuentra verdadero, el valor de
+@code{cond} no está definido.
 
-The word @newterm{predicate} is used for procedures that return true or false,
-as well as for expressions that evaluate to true or false.  The absolute-value
-procedure @code{abs} makes use of the primitive predicates @code{>}, @code{<},
-and @code{=}.@footnote{@code{abs} also uses the ``minus'' operator @code{-},
-which, when used with a single operand, as in @code{(- x)}, indicates
-negation.} These take two numbers as arguments and test whether the first
-number is, respectively, greater than, less than, or equal to the second
-number, returning true or false accordingly.
+La palabra @newterm{predicado} se utiliza tanto para procedimientos
+que devuelven verdadero o falso, como para expresiones que se evalúan
+como verdadero o falso. El procedimiento de valor absoluto @code{abs}
+utiliza los predicados primitivos @code{>}, @code{<} y @code{=}.
+@footnote{@code{abs} también utiliza el operador "menos" @code{-}, que
+cuando se usa con un solo operando, como en @code{(- x)}, indica
+negación.} Estos toman dos números como argumentos y prueban si el
+primer número es, respectivamente, mayor que, menor que o igual al
+segundo número, devolviendo verdadero o falso en consecuencia.
 
-Another way to write the absolute-value procedure is
+Otra forma de escribir el mismo procedimiento es
 
 @lisp
-(define (abs x)
+(definir (abs x)
   (cond ((< x 0) (- x))
         (else x)))
 @end lisp
 
 @noindent
-which could be expressed in English as ``If @math{x} is less than zero return
-@math{-x;} otherwise return @math{x}.''  @code{else} is a special symbol that can be
-used in place of the @math{\langle{p}\rangle} in the final clause of a @code{cond}.  This
-causes the @code{cond} to return as its value the value of the corresponding
-@math{\langle{e}\rangle} whenever all previous clauses have been bypassed.  In fact, any
-expression that always evaluates to a true value could be used as the @math{\langle{p}\rangle}
-here.
+Lo que podría expresarse en español como ``Si @math{x} es menor que
+cero, devuelve @math{-x;} de lo contrario, devuelve @math{x}.''
+@code{else} es un símbolo especial que se puede usar en lugar de
+@math{\langle{p}\rangle} en la cláusula final de un @code{cond}. Esto
+hace que el @code{cond} devuelva como valor el valor de
+@math{\langle{e}\rangle} correspondiente siempre que se hayan pasado
+por alto todas las cláusulas anteriores. De hecho, cualquier expresión
+que siempre se evalúe a un valor verdadero podría usarse como
+@math{\langle{p}\rangle} aquí.
 
-Here is yet another way to write the absolute-value procedure:
+Aquí hay otra manera de escribir el procedimiento de valor absoluto:
 
 @lisp
-(define (abs x)
-  (if (< x 0)
+(definir (abs x)
+  (si (< x 0)
       (- x)
       x))
 @end lisp
 
 @noindent
-This uses the special form @code{if}, a restricted type of conditional that can
-be used when there are precisely two cases in the case analysis.  The general
-form of an @code{if} expression is
+Esto usa la forma especial @code{si}, un tipo restringido de
+condicional que se puede usar cuando hay precisamente dos casos en el
+análisis de casos. La forma general de una expresión @code{si} es:
 
 @lisp
-(if @math{\langle\kern0.07em}@var{predicate}@math{\kern0.06em\rangle} @math{\langle\kern0.07em}@var{consequent}@math{\kern0.05em\rangle} @math{\langle\kern0.06em}@var{alternative}@math{\kern0.06em\rangle})
+(si @math{\langle\kern0.07em}@var{predicado}@math{\kern0.06em\rangle} @math{\langle\kern0.07em}@var{consecuente}@math{\kern0.05em\rangle} @math{\langle\kern0.06em}@var{alternativa}@math{\kern0.06em\rangle})
 @end lisp
 
 @noindent
-To evaluate an @code{if} expression, the interpreter starts by evaluating the
-@math{\langle}@var{predicate}@math{\kern0.04em\rangle} part of the expression.  If the @math{\langle}@var{predicate}@math{\kern0.04em\rangle} evaluates
-to a true value, the interpreter then evaluates the @math{\langle}@var{consequent}@math{\kern0.04em\rangle} and
-returns its value.  Otherwise it evaluates the @math{\langle}@var{alternative}@math{\kern0.04em\rangle} and returns
-its value.@footnote{A minor difference between @code{if} and @code{cond} is
-that the @math{\langle{e}\rangle} part of each @code{cond} clause may be a sequence of
-expressions.  If the corresponding @math{\langle{p}\rangle} is found to be true, the
-expressions @math{\langle{e}\rangle} are evaluated in sequence and the value of the final
-expression in the sequence is returned as the value of the @code{cond}.  In an
-@code{if} expression, however, the @math{\langle}@var{consequent}@math{\kern0.04em\rangle} and @math{\langle}@var{alternative}@math{\kern0.04em\rangle}
-must be single expressions.}
+Para evaluar una expresión @code{si}, el intérprete comienza evaluando
+la parte @math{\langle}@var{predicate}@math{\kern0.04em\rangle} de la
+expresión. Si el
+@math{\langle}@var{predicado}@math{\kern0.04em\rangle} se evalúa como
+un valor verdadero, el intérprete entonces evalúa el
+@math{\langle}@var{consecuente}@math{\kern0.04em\rangle} y devuelve su
+valor. De lo contrario, evalúa la
+@math{\langle}@var{alternativa}@math{\kern0.04em\rangle} y devuelve su
+valor.@footnote{Una diferencia menor entre @code{si} y @code{cond} es
+que la parte @math{\langle{e}\rangle} de cada cláusula @code{cond}
+puede ser una secuencia de expresiones. Si se encuentra que el
+correspondiente @math{\langle{p}\rangle} es verdadero, las expresiones
+@math{\langle{e}\rangle} se evalúan en secuencia y el valor de la
+expresión final en la secuencia se devuelve como el valor del
+@code{cond}. Sin embargo, en una expresión @code{si}, el
+@math{\langle}@var{consecuente}@math{\kern0.04em\rangle} y la
+@math{\langle}@var{alternativa}@math{\kern0.04em\rangle} deben ser
+expresiones únicas.}
 
-In addition to primitive predicates such as @code{<}, @code{=}, and @code{>},
-there are logical composition operations, which enable us to construct compound
-predicates.  The three most frequently used are these:
+Además de los predicados primitivos como @code{<}, @code{=}, y
+@code{>}, hay operaciones de composición lógica que nos permiten
+construir predicados compuestos. Las tres más frecuentemente
+utilizadas son las siguientes:
 
 @itemize @bullet
 
 @item
-@math{\hbox{\tt(and }\langle{e_1}\rangle\;\;\dots\;\;\langle{e_n}\rangle\hbox{\tt)}}
+@math{\hbox{\tt(y }\langle{e_1}\rangle\;\;\dots\;\;\langle{e_n}\rangle\hbox{\tt)}}
 
-The interpreter evaluates the expressions @math{\langle{e}\kern0.08em\rangle} one at a time, in
-left-to-right order.  If any @math{\langle{e}\kern0.08em\rangle} evaluates to false, the value of the
-@code{and} expression is false, and the rest of the @math{\langle{e}\kern0.08em\rangle}'s are not
-evaluated.  If all @math{\langle{e}\kern0.08em\rangle}'s evaluate to true values, the value of the
-@code{and} expression is the value of the last one.
-
-@item
-@math{\hbox{\tt(or }\langle{e_1}\rangle\;\;\dots\;\;\langle{e_n}\rangle\hbox{\tt)}}
-
-The interpreter evaluates the expressions @math{\langle{e}\kern0.08em\rangle} one at a time, in
-left-to-right order.  If any @math{\langle{e}\kern0.08em\rangle} evaluates to a true value, that value is
-returned as the value of the @code{or} expression, and the rest of the
-@math{\langle{e}\kern0.08em\rangle}'s are not evaluated.  If all @math{\langle{e}\kern0.08em\rangle}'s evaluate to false, the value
-of the @code{or} expression is false.
+El intérprete evalúa las expresiones
+@math{\langle{e}\kern0.08em\rangle} una por una, en orden de izquierda
+a derecha. Si alguna @math{\langle{e}\kern0.08em\rangle} evalúa a
+falso, el valor de la expresión @code{y} es falso y las demás
+@math{\langle{e}\kern0.08em\rangle} no se evalúan. Si todas las
+@math{\langle{e}\kern0.08em\rangle} se evalúan como valores
+verdaderos, el valor de la expresión @code{y} es el valor de la
+última.
 
 @item
-@math{\hbox{\tt(not }\langle{e}\rangle\hbox{\tt)}}
+@math{\hbox{\tt(o }\langle{e_1}\rangle\;\;\dots\;\;\langle{e_n}\rangle\hbox{\tt)}}
 
-The value of a @code{not} expression is true when the expression @math{\langle{e}\kern0.08em\rangle}
-evaluates to false, and false otherwise.
+El intérprete evalúa las expresiones
+@math{\langle{e}\kern0.08em\rangle} una por una, en orden de izquierda
+a derecha. Si alguna @math{\langle{e}\kern0.08em\rangle} se evalúa
+como un valor verdadero, ese valor se devuelve como el valor de la
+expresión @code{o} y las demás @math{\langle{e}\kern0.08em\rangle} no
+se evalúan. Si todas las @math{\langle{e}\kern0.08em\rangle} se
+evalúan como falsas, el valor de la expresión @code{o} es falso.
+
+@item
+@math{\hbox{\tt(no }\langle{e}\rangle\hbox{\tt)}}
+
+El valor de una expresión @code{no} es verdadero cuando la expresión
+@math{\langle{e}\kern0.08em\rangle} se evalúa como falso, y falso en
+caso contrario.
 
 @end itemize
 
 @noindent
-Notice that @code{and} and @code{or} are special forms, not procedures, because
-the subexpressions are not necessarily all evaluated.  @code{not} is an
-ordinary procedure.
+Observe que @code{y} y @code{o} son formas especiales, no
+procedimientos, porque no se evalúan necesariamente todas las
+subexpresiones. @code{no} es un procedimiento ordinario.
 
-As an example of how these are used, the condition that a number @math{x} be in
-the range @math{5 < x < 10} may be expressed as
+Como ejemplo de cómo se utilizan, la condición de que un número
+@math{x} esté en el rango @math{5 < x < 10} puede expresarse como
 
 @lisp
-(and (> x 5) (< x 10))
+(y (> x 5) (< x 10))
 @end lisp
 
 @noindent
-As another example, we can define a predicate to test whether one number is
-greater than or equal to another as
+Como otro ejemplo, podemos definir un predicado para probar si un
+número es mayor o igual que otro de la siguiente manera:
 
 @lisp
-(define (>= x y) (or (> x y) (= x y)))
+(definir (>= x y) (o (> x y) (= x y)))
 @end lisp
 
 @noindent
-or alternatively as
+o alternativamente como
 
 @lisp
-(define (>= x y) (not (< x y)))
+(definir (>= x y) (not (< x y)))
 @end lisp
 
 @quotation
-@strong{@anchor{Exercise 1.1}Exercise 1.1:} Below is a sequence of expressions.
-What is the result printed by the interpreter in response to each expression?
-Assume that the sequence is to be evaluated in the order in which it is
-presented.
+@strong{@anchor{Ejercicio 1.1}Ejercicio 1.1:} A continuación se muestra una secuencia de expresiones.
+¿Cuál es el resultado impreso por el intérprete en respuesta a cada expresión?
+Suponga que la secuencia se evalúa en el orden en que se presenta.
 
 @lisp
 10
@@ -2216,11 +2256,11 @@ presented.
 (- 9 1)
 (/ 6 2)
 (+ (* 2 4) (- 4 6))
-(define a 3)
-(define b (+ a 1))
+(definir a 3)
+(definir b (+ a 1))
 (+ a b (* a b))
 (= a b)
-(if (and (> b a) (< b (* a b)))
+(si (y (> b a) (< b (* a b)))
     b
     a)
 @end lisp
@@ -2232,7 +2272,7 @@ presented.
 @end lisp
 
 @lisp
-(+ 2 (if (> b a) b a))
+(+ 2 (si (> b a) b a))
 @end lisp
 
 @lisp
@@ -2244,8 +2284,8 @@ presented.
 @end quotation
 
 @quotation
-@strong{@anchor{Exercise 1.2}Exercise 1.2:} Translate the following expression
-into prefix form:
+@strong{@anchor{Ejercicio 1.2}Ejercicio 1.2:} Traduzca la siguiente
+expresión a la notación prefija:
 @ifinfo
 
 @example
@@ -2261,124 +2301,138 @@ $${5 + 4 + (2 - (3 - (6 + {4\over5})))\over3(6 - 2)(2 - 7)}.$$
 @end quotation
 
 @quotation
-@strong{@anchor{Exercise 1.3}Exercise 1.3:} Define a procedure that takes three
-numbers as arguments and returns the sum of the squares of the two larger
-numbers.
+@strong{@anchor{Ejercicio 1.3}Ejercicio 1.3:} Defina un procedimiento
+que tome tres números como argumentos y devuelva la suma de los
+cuadrados de los dos números más grandes.
 @end quotation
 
 @quotation
-@strong{@anchor{Exercise 1.4}Exercise 1.4:} Observe that our model of
-evaluation allows for combinations whose operators are compound expressions.
-Use this observation to describe the behavior of the following procedure:
+@strong{@anchor{Ejercicio 1.4}Ejercicio 1.4:} Observe que nuestro
+modelo de evaluación permite combinaciones cuyos operadores son
+expresiones compuestas.
+Use esta observación para describir el comportamiento del siguiente
+procedimiento:
 
 @lisp
-(define (a-plus-abs-b a b)
-  ((if (> b 0) + -) a b))
+(definir (a-mas-abs-b a b)
+  ((si (> b 0) + -) a b))
 @end lisp
 @end quotation
 
 @quotation
-@strong{@anchor{Exercise 1.5}Exercise 1.5:} Ben Bitdiddle has invented a test
-to determine whether the interpreter he is faced with is using
-applicative-order evaluation or normal-order evaluation.  He defines the
-following two procedures:
+@strong{@anchor{Ejercicio 1.5}Ejercicio 1.5:} Ben Bitdiddle ha
+inventado una prueba para determinar si el intérprete al que se
+enfrenta está utilizando la evaluación por orden de aplicación o la
+evaluación por orden normal. Él define los siguientes dos
+procedimientos:
 
 @lisp
-(define (p) (p))
-(define (test x y)
-  (if (= x 0) 0 y))
+(definir (p) (p))
+(definir (test x y)
+  (si (= x 0) 0 y))
 @end lisp
 
-Then he evaluates the expression
+Luego él evalúa la expresión
 
 @lisp
 (test 0 (p))
 @end lisp
 
-What behavior will Ben observe with an interpreter that uses applicative-order
-evaluation?  What behavior will he observe with an interpreter that uses
-normal-order evaluation?  Explain your answer.  (Assume that the evaluation
-rule for the special form @code{if} is the same whether the interpreter is
-using normal or applicative order: The predicate expression is evaluated first,
-and the result determines whether to evaluate the consequent or the alternative
-expression.)
+¿Qué comportamiento observará Ben con un intérprete que utiliza la
+evaluación por orden de aplicación? ¿Qué comportamiento observará con
+un intérprete que utiliza la evaluación por orden normal? Explique su
+respuesta. (Suponga que la regla de evaluación para la forma especial
+@code{si} es la misma tanto si el intérprete está utilizando el orden
+normal como el orden de aplicación: la expresión predicado se evalúa
+primero y el resultado determina si se evalúa la expresión consecuente
+o la alternativa.)
 @end quotation
 
 @endpage
-@subsection Example: Square Roots by Newton's Method
-@node	1.1.7, 1.1.8, 1.1.6, 1.1
 
-Procedures, as introduced above, are much like ordinary mathematical functions.
-They specify a value that is determined by one or more parameters.  But there
-is an important difference between mathematical functions and computer
-procedures.  Procedures must be effective.
+@subsection Ejemplo: Raíces cuadradas por el método de Newton
+@node 1.1.7, 1.1.8, 1.1.6, 1.1
 
-As a case in point, consider the problem of computing square roots.  We can
-define the square-root function as
+Los procedimientos, tal como se introdujeron anteriormente, son muy
+parecidos a las funciones matemáticas ordinarias. Especifican un valor
+que está determinado por uno o más parámetros. Pero hay una diferencia
+importante entre las funciones matemáticas y los procedimientos
+informáticos. Los procedimientos deben ser efectivos.
+
+A modo de ejemplo, consideremos el problema de calcular las raíces
+cuadradas. Podemos definir la función raíz cuadrada como
 @ifinfo
 
 @example
-sqrt(x) = the y such that y >= 0 and y^2 = x
+raiz(x) = el número y tal que y >= 0 y y^2 = x
 @end example
 
 @end ifinfo
 @tex
-$$\sqrt{x}\;\; = {\rm\;\; the\;\;} y
-{\rm\;\; such\;\; that\;\;} y \ge 0 {\rm\;\; and\;\;} y^2 = x.$$
+$$\sqrt{x}\;\; = {\rm\;\; el\;\; } y
+{\rm\;\; tal\;\; que\;\;} y \ge 0 {\rm\;\; y\;\;} y^2 = x.$$
 @end tex
-This describes a perfectly legitimate mathematical function.  We could use it
-to recognize whether one number is the square root of another, or to derive
-facts about square roots in general.  On the other hand, the definition does
-not describe a procedure.  Indeed, it tells us almost nothing about how to
-actually find the square root of a given number.  It will not help matters to
-rephrase this definition in pseudo-Lisp:
+
+Esto describe una función matemática perfectamente legítima. Podríamos
+usarla para reconocer si un número es la raíz cuadrada de otro, o para
+derivar hechos acerca de las raíces cuadradas en general. Por otro
+lado, la definición no describe un procedimiento. De hecho, no nos
+dice casi nada acerca de cómo encontrar realmente la raíz cuadrada de
+un número dado. No ayudará a reformular esta definición en
+pseudo-Lisp:
 
 @lisp
-(define (sqrt x)
-  (the y (and (>= y 0)
-              (= (square y) x))))
+(definir (raiz x)
+  (el y (y (>= y 0)
+             (= (cuadrado y) x))))
 @end lisp
 
 @noindent
-This only begs the question.
+Esto simplemente plantea la pregunta.
 
-The contrast between function and procedure is a reflection of the general
-distinction between describing properties of things and describing how to do
-things, or, as it is sometimes referred to, the distinction between declarative
-knowledge and imperative knowledge.  In mathematics we are usually concerned
-with declarative (what is) descriptions, whereas in computer science we are
-usually concerned with imperative (how to) descriptions.@footnote{Declarative
-and imperative descriptions are intimately related, as indeed are mathematics
-and computer science.  For instance, to say that the answer produced by a
-program is ``correct'' is to make a declarative statement about the program.
-There is a large amount of research aimed at establishing techniques for
-proving that programs are correct, and much of the technical difficulty of this
-subject has to do with negotiating the transition between imperative statements
-(from which programs are constructed) and declarative statements (which can be
-used to deduce things).  In a related vein, an important current area in
-programming-language design is the exploration of so-called very high-level
-languages, in which one actually programs in terms of declarative statements.
-The idea is to make interpreters sophisticated enough so that, given ``what
-is'' knowledge specified by the programmer, they can generate ``how to''
-knowledge automatically.  This cannot be done in general, but there are
-important areas where progress has been made.  We shall revisit this idea in
-@ref{Chapter 4}.}
+El contraste entre función y procedimiento refleja la distinción
+general entre describir propiedades de las cosas y describir cómo
+hacer cosas, o como a veces se llama, la distinción entre conocimiento
+declarativo y conocimiento imperativo. En matemáticas, generalmente
+estamos preocupados por descripciones declarativas (lo que es),
+mientras que en informática, generalmente estamos preocupados por
+descripciones imperativas (cómo hacerlo). @footnote{Las descripciones
+declarativas e imperativas están íntimamente relacionadas, al igual
+que las matemáticas y la informática. Por ejemplo, decir que la
+respuesta producida por un programa es ``correcta'' es hacer una
+declaración declarativa sobre el programa. Existe una gran cantidad de
+investigación dirigida a establecer técnicas para demostrar que los
+programas son correctos, y gran parte de la dificultad técnica de este
+tema tiene que ver con negociar la transición entre las declaraciones
+imperativas (a partir de las cuales se construyen los programas) y las
+declaraciones declarativas (que se pueden usar para deducir cosas). En
+una vena relacionada, un área actual importante en el diseño de
+lenguajes de programación es la exploración de los llamados lenguajes
+de muy alto nivel, en los cuales uno realmente programa en términos de
+declaraciones declarativas. La idea es hacer que los intérpretes sean
+lo suficientemente sofisticados como para que, dada la ``información
+de lo que es'' especificada por el programador, puedan generar
+automáticamente el ``conocimiento de cómo hacerlo''. Esto no se puede
+hacer en general, pero hay áreas importantes donde se ha avanzado.
+Volveremos a visitar esta idea en @ref{Chapter 4}.}
 
-How does one compute square roots?  The most common way is to use Newton's
-method of successive approximations, which says that whenever we have a guess
-@math{y} for the value of the square root of a number @math{x}, we can perform a
-simple manipulation to get a better guess (one closer to the actual square
-root) by averaging @math{y} with @math{x / y}.@footnote{This square-root algorithm
-is actually a special case of Newton's method, which is a general technique for
-finding roots of equations.  The square-root algorithm itself was developed by
-Heron of Alexandria in the first century @acronym{A.D.}  We will see how to
-express the general Newton's method as a Lisp procedure in @ref{1.3.4}.}
-For example, we can compute the square root of 2 as follows.
-Suppose our initial guess is 1:
+¿Cómo se calculan las raíces cuadradas? La forma más común es utilizar
+el método de aproximaciones sucesivas de Newton, que dice que siempre
+que tengamos una estimación @math{y} para el valor de la raíz cuadrada
+de un número @math{x}, podemos realizar una manipulación simple para
+obtener una estimación mejor (una más cercana a la raíz cuadrada real)
+promediando @math{y} con @math{x/y}.@footnote{Este algoritmo de raíz
+cuadrada es en realidad un caso especial del método de Newton, que es
+una técnica general para encontrar raíces de ecuaciones. El algoritmo
+de raíz cuadrada en sí fue desarrollado por Herón de Alejandría en el
+primer siglo d.C. Veremos cómo expresar el método de Newton general
+como un procedimiento Lisp en @ref{1.3.4}.} Por ejemplo, podemos
+calcular la raíz cuadrada de 2 de la siguiente manera. Supongamos que
+nuestra estimación inicial es 1:
 
 @sp -0.8
 @smallexample
-Guess       Quotient                 Average
+Estimación  Cociente                 Promedio
 1           (2/1) = 2                ((2 + 1)/2) = 1.5
 1.5         (2/1.5) = 1.3333         ((1.3333 + 1.5)/2) = 1.4167
 1.4167      (2/1.4167) = 1.4118      ((1.4167 + 1.4118)/2) = 1.4142
@@ -2386,156 +2440,173 @@ Guess       Quotient                 Average
 @end smallexample
 
 @noindent
-Continuing this process, we obtain better and better approximations to the
-square root.
+Continuando este proceso, obtenemos aproximaciones cada vez mejores de
+la raíz cuadrada.
 
-Now let's formalize the process in terms of procedures.  We start with a value
-for the radicand (the number whose square root we are trying to compute) and a
-value for the guess.  If the guess is good enough for our purposes, we are
-done; if not, we must repeat the process with an improved guess.  We write this
-basic strategy as a procedure:
+Ahora formalicemos el proceso en términos de procedimientos.
+Comenzamos con un valor para el radicando (el número cuya raíz
+cuadrada estamos intentando calcular) y un valor para la suposición.
+Si la estimación es lo suficientemente buena para nuestros propósitos,
+hemos terminado; si no, debemos repetir el proceso con una estimación
+mejorada. Escribimos esta estrategia básica como un procedimiento:
 
 @lisp
-(define (sqrt-iter guess x)
-  (if (good-enough? guess x)
-      guess
-      (sqrt-iter (improve guess x) x)))
+(definir (raiz-iterador estimacion x)
+  (si (aceptable? estimacion x)
+      estimacion
+      (raiz-iterador (mejorar estimacion x) x)))
 @end lisp
 
 @noindent
-A guess is improved by averaging it with the quotient of the radicand and the
-old guess:
+Una estimación se mejora al promediarla con el cociente del radicando
+y la antigua estimación:
 
 @lisp
-(define (improve guess x)
-  (average guess (/ x guess)))
+(definir (mejorar estimacion x)
+  (promedio estimacion (/ x estimacion)))
 @end lisp
 
 @noindent
-where
+donde
 
 @lisp
-(define (average x y)
-  (/ (+ x y) 2))
+(definir (promedio a b)
+  (/ (+ a b) 2))
 @end lisp
 
 @noindent
-We also have to say what we mean by ``good enough.''  The following will do for
-illustration, but it is not really a very good test.  (See @ref{Exercise 1.7}.)
-The idea is to improve the answer until it is close
-enough so that its square differs from the radicand by less than a
-predetermined tolerance (here 0.001):@footnote{We will usually give predicates
-names ending with question marks, to help us remember that they are predicates.
-This is just a stylistic convention.  As far as the interpreter is concerned,
-the question mark is just an ordinary character.}
+También tenemos que especificar lo que queremos decir con
+``suficientemente bueno''. Lo siguiente servirá para ilustrar, pero no
+es una prueba muy buena. (Ver @ref{Ejercicio 1.7}.) La idea es mejorar
+la respuesta hasta que esté lo suficientemente cerca para que su
+cuadrado difiera del radicando por menos de una tolerancia
+predeterminada (aquí 0.001): @footnote{Normalmente daremos nombres de
+predicado que terminen con signos de interrogación para ayudarnos a
+recordar que son predicados. Esto es solo una convención de estilo. En
+lo que respecta al intérprete, el signo de interrogación es
+simplemente un carácter común.}
 
 @lisp
-(define (good-enough? guess x)
-  (< (abs (- (square guess) x)) 0.001))
+(definir (aceptable? estimacion x)
+  (< (abs (- (cuadrado estimacion) x)) 0.001))
 @end lisp
 
 @noindent
-Finally, we need a way to get started.  For instance, we can always guess that
-the square root of any number is 1:@footnote{Observe that we express our
-initial guess as 1.0 rather than 1.  This would not make any difference in many
-Lisp implementations.  @acronym{MIT} Scheme, however, distinguishes between
-exact integers and decimal values, and dividing two integers produces a
-rational number rather than a decimal.  For example, dividing 10 by 6 yields
-5/3, while dividing 10.0 by 6.0 yields 1.6666666666666667.  (We will learn how
-to implement arithmetic on rational numbers in @ref{2.1.1}.)  If we
-start with an initial guess of 1 in our square-root program, and @math{x} is an
-exact integer, all subsequent values produced in the square-root computation
-will be rational numbers rather than decimals.  Mixed operations on rational
-numbers and decimals always yield decimals, so starting with an initial guess
-of 1.0 forces all subsequent values to be decimals.}
+Finalmente, necesitamos una forma de empezar. Por ejemplo, siempre
+podemos estimar que la raíz cuadrada de cualquier número es
+1:@footnote{Observa que expresamos nuestra estimación inicial como 1.0
+en lugar de 1. Esto no haría ninguna diferencia en muchas
+implementaciones de Lisp. Scheme, sin embargo, distingue entre enteros
+exactos y valores decimales, y dividir dos enteros produce un número
+racional en lugar de un decimal. Por ejemplo, dividir 10 por 6 produce
+5/3, mientras que dividir 10.0 por 6.0 produce 1.6666666666666667.
+(Aprenderemos cómo implementar la aritmética en números racionales en
+@ref{2.1.1}.) Si empezamos con una estimación inicial de 1 en nuestro
+programa de raíz cuadrada, y @math{x} es un entero exacto, todos los
+valores posteriores producidos en el cálculo de la raíz cuadrada serán
+números racionales en lugar de decimales. Las operaciones mixtas en
+números racionales y decimales siempre producen decimales, por lo que
+comenzar con una estimación inicial de 1.0 fuerza a que todos los
+valores posteriores sean decimales.}
 
 @lisp
-(define (sqrt x)
-  (sqrt-iter 1.0 x))
+(definir (raiz x)
+  (raiz-iterador 1.0 x))
 @end lisp
 
 @noindent
-If we type these definitions to the interpreter, we can use @code{sqrt} just as
-we can use any procedure:
+Si escribimos estas definiciones en el intérprete, podemos utilizar
+@code{raiz} como cualquier otro procedimiento:
 
 @lisp
-(sqrt 9)
+(raiz 9)
 @i{3.00009155413138}
 
-(sqrt (+ 100 37))
+(raiz (+ 100 37))
 @i{11.704699917758145}
 
-(sqrt (+ (sqrt 2) (sqrt 3)))
+(raiz (+ (raiz 2) (raiz 3)))
 @i{1.7739279023207892}
 
-(square (sqrt 1000))
+(cuadrado (raiz 1000))
 @i{1000.000369924366}
 @end lisp
 
 @noindent
-The @code{sqrt} program also illustrates that the simple procedural language we
-have introduced so far is sufficient for writing any purely numerical program
-that one could write in, say, C or Pascal.  This might seem surprising, since
-we have not included in our language any iterative (looping) constructs that
-direct the computer to do something over and over again.  @code{sqrt-iter}, on
-the other hand, demonstrates how iteration can be accomplished using no special
-construct other than the ordinary ability to call a procedure.@footnote{Readers
-who are worried about the efficiency issues involved in using procedure calls
-to implement iteration should note the remarks on ``tail recursion'' in
+El programa @code{raiz} también ilustra que el lenguaje procedimental
+simple que hemos introducido hasta ahora es suficiente para escribir
+cualquier programa numérico puro que se pueda escribir en, por
+ejemplo, C o Pascal. Esto podría parecer sorprendente, ya que no hemos
+incluido en nuestro lenguaje ninguna estructura iterativa (de bucle)
+que dirija al ordenador a hacer algo una y otra vez. Por otro lado,
+@code{raiz-iterador} demuestra cómo se puede realizar la iteración sin
+utilizar ninguna estructura especial aparte de la capacidad ordinaria
+de llamar a un procedimiento. @footnote{Los lectores que estén
+preocupados por los problemas de eficiencia implicados en el uso de
+llamadas a procedimientos para implementar la iteración deben tener en
+cuenta las observaciones sobre la ``recursión de cola'' en
 @ref{1.2.1}.}
 
 @quotation
-@strong{@anchor{Exercise 1.6}Exercise 1.6:} Alyssa P. Hacker doesn't see why
-@code{if} needs to be provided as a special form.  ``Why can't I just define it
-as an ordinary procedure in terms of @code{cond}?'' she asks.  Alyssa's friend
-Eva Lu Ator claims this can indeed be done, and she defines a new version of
-@code{if}:
+@strong{@anchor{Ejercicio 1.6}Ejercicio 1.6:} Alyssa P. Hacker no
+entiende por qué @code{si} tiene que ser proporcionado como una forma
+especial. ``¿Por qué no puedo definirlo como un procedimiento
+ordinario en términos de @code{cond}?", pregunta. La amiga de Alyssa,
+Eva Lu Ador, afirma que esto de hecho se puede hacer, y ella define
+una nueva versión de @code{si}:
 
 @lisp
-(define (new-if predicate then-clause else-clause)
-  (cond (predicate then-clause)
-        (else else-clause)))
+(definir (nuevo-si predicado
+                   clausula-entonces
+                   clausula-sino)
+  (cond (predicado clausula-entonces)
+        (else clausula-sino)))
 @end lisp
 
-Eva demonstrates the program for Alyssa:
+Eva le demuestra el programa a Alyssa:
 
 @lisp
-(new-if (= 2 3) 0 5)
+(nuevo-si (= 2 3) 0 5)
 @i{5}
-(new-if (= 1 1) 0 5)
+(nuevo-si (= 1 1) 0 5)
 @i{0}
 @end lisp
 
-Delighted, Alyssa uses @code{new-if} to rewrite the square-root program:
+Encantada, Alyssa usa @code{nuevo-si} para re-escribir el programa de
+raiz cuadrada:
 
 @lisp
-(define (sqrt-iter guess x)
-  (new-if (good-enough? guess x)
-          guess
-          (sqrt-iter (improve guess x) x)))
+(definir (raiz-iterador estimacion x)
+  (nuevo-si (aceptable? estimacion x)
+            estimacion
+            (raiz-iterador (mejorar estimacion x) x)))
 @end lisp
 
-What happens when Alyssa attempts to use this to compute square roots?
-Explain.
+¿Que sucede cuando Alyssa intenta usar esto para calcular raíces
+cuadradas? Explique.
 @end quotation
 
 @quotation
-@strong{@anchor{Exercise 1.7}Exercise 1.7:} The @code{good-enough?} test used
-in computing square roots will not be very effective for finding the square
-roots of very small numbers.  Also, in real computers, arithmetic operations
-are almost always performed with limited precision.  This makes our test
-inadequate for very large numbers.  Explain these statements, with examples
-showing how the test fails for small and large numbers.  An alternative
-strategy for implementing @code{good-enough?} is to watch how @code{guess}
-changes from one iteration to the next and to stop when the change is a very
-small fraction of the guess.  Design a square-root procedure that uses this
-kind of end test.  Does this work better for small and large numbers?
+@strong{@anchor{Ejercicio 1.7}Ejercicio 1.7:} La prueba
+@code{aceptable?} utilizada para calcular raíces cuadradas
+no será muy efectiva para encontrar raíces cuadradas de números muy
+pequeños. Además, en las computadoras reales, las operaciones
+aritméticas casi siempre se realizan con precisión limitada. Esto hace
+que nuestra prueba sea inadecuada para números muy grandes. Explique
+estas afirmaciones, con ejemplos que muestren cómo falla la prueba
+para números pequeños y grandes. Una estrategia alternativa para
+implementar @code{aceptable?} es observar cómo cambia
+@code{estimacion} de una iteración a la siguiente y detenerse cuando
+el cambio sea una fracción muy pequeña de @code{estimacion}. Diseñe un
+procedimiento de raíz cuadrada que utilice este tipo de prueba final.
+¿Funciona mejor para números pequeños y grandes?
 @end quotation
 
 @quotation
-@strong{@anchor{Exercise 1.8}Exercise 1.8:} Newton's method for cube roots is
-based on the fact that if @math{y} is an approximation to the cube root of @math{x},
-then a better approximation is given by the value
+@strong{@anchor{Ejercicio 1.8}Ejercicio 1.8:} El método de Newton para
+raíces cúbicas se basa en el hecho de que si @math{y} es una
+aproximación a la raíz cúbica de @math{x}, entonces una mejor
+aproximación se obtiene con el valor
 @ifinfo
 
 @example
@@ -2549,295 +2620,339 @@ x/y^2 + 2y
 $${{x / y^2} + 2y \over 3}.$$
 @end tex
 @noindent
-Use this formula to implement a cube-root procedure analogous to the
-square-root procedure.  (In @ref{1.3.4} we will see how to implement
-Newton's method in general as an abstraction of these square-root and cube-root
-procedures.)
+Utilice esta fórmula para implementar un procedimiento de raíz cúbica
+análogo al procedimiento de raíz cuadrada. (En la sección @ref{1.3.4}
+veremos cómo implementar el método de Newton de manera general como
+una abstracción de estos procedimientos de raíz cuadrada y raíz
+cúbica).
 @end quotation
 
 @subsection Procedures as Black-Box Abstractions
 @node	1.1.8,  , 1.1.7, 1.1
 
-@code{sqrt} is our first example of a process defined by a set of mutually
-defined procedures.  Notice that the definition of @code{sqrt-iter} is
-@newterm{recursive}; that is, the procedure is defined in terms of itself.  The
-idea of being able to define a procedure in terms of itself may be disturbing;
-it may seem unclear how such a ``circular'' definition could make sense at all,
-much less specify a well-defined process to be carried out by a computer.  This
-will be addressed more carefully in @ref{1.2}.  But first let's
-consider some other important points illustrated by the @code{sqrt} example.
+@code{raiz} es nuestro primer ejemplo de un proceso definido por un
+conjunto de procedimientos mutuamente definidos. Observe que la
+definición de @code{raiz-iterador} es @newterm{recursiva}; es decir,
+el procedimiento está definido en términos de sí mismo. La idea de
+poder definir un procedimiento en términos de sí mismo puede resultar
+desconcertante; puede parecer poco claro cómo tal definición
+``circular'' podría tener sentido en absoluto, mucho menos especificar
+un proceso bien definido que deba ser llevado a cabo por una
+computadora. Esto se abordará con más cuidado en @ref{1.2}. Pero
+primero, consideremos algunos otros puntos importantes ilustrados por
+el ejemplo de @code{raiz}.
 
-Observe that the problem of computing square roots breaks up naturally into a
-number of subproblems: how to tell whether a guess is good enough, how to
-improve a guess, and so on.  Each of these tasks is accomplished by a separate
-procedure.  The entire @code{sqrt} program can be viewed as a cluster of
-procedures (shown in @ref{Figure 1.2}) that mirrors the decomposition of the
-problem into subproblems.
+Observe que el problema de calcular raíces cuadradas se divide
+naturalmente en una serie de subproblemas: cómo determinar si una
+suposición es lo suficientemente buena, cómo mejorar una suposición, y
+así sucesivamente. Cada una de estas tareas se lleva a cabo mediante
+un procedimiento separado. Todo el programa @code{raiz} puede ser
+visto como un conjunto de procedimientos (mostrados en @ref{Figura 1.2})
+que refleja la descomposición del problema en subproblemas.
 
 @float
 @quotation
-@anchor{Figure 1.2}
+@anchor{Figura 1.2}
 @ifinfo
-@strong{Figure 1.2:} Procedural decomposition of the @code{sqrt} program.
+@strong{Figura 1.2:} Descomposición procedural del programa @code{raiz}.
 
 @example
-                       sqrt
+                       raiz
                         |
-                    sqrt-iter
-                    /       \
-            good-enough    improve
-              /     \          \
-          square    abs      average
+                    raiz-iterador
+                    /           \
+      aceptable?   improve
+              /     \             \
+         cuadrado   abs         promedio
 @end example
 @end ifinfo
 @iftex
 @sp 0.5
 @center @image{fig/chap1/Fig1.2,44mm,,,.pdf}
 @sp 0.5
-@center @caption{@strong{Figure 1.2:} Procedural decomposition of the @code{sqrt} program.}
+@center @caption{@strong{Figura 1.2:} Descomposición procedural del programa @code{raiz}.}
 @sp 0.7
 @end iftex
 @end quotation
 @end float
+La importancia de esta estrategia de descomposición no es simplemente
+dividir el programa en partes. Después de todo, podríamos tomar
+cualquier programa grande y dividirlo en partes---las primeras diez
+líneas, las siguientes diez líneas, las siguientes diez líneas, y así
+sucesivamente. Más bien, es crucial que cada procedimiento logre una
+tarea identificable que pueda ser utilizada como un módulo en la
+definición de otros procedimientos.
 
-The importance of this decomposition strategy is not simply that one is
-dividing the program into parts.  After all, we could take any large program
-and divide it into parts---the first ten lines, the next ten lines, the next
-ten lines, and so on.  Rather, it is crucial that each procedure accomplishes
-an identifiable task that can be used as a module in defining other procedures.
-For example, when we define the @code{good-enough?} procedure in terms of
-@code{square}, we are able to regard the @code{square} procedure as a ``black
-box.''  We are not at that moment concerned with @emph{how} the procedure
-computes its result, only with the fact that it computes the square.  The
-details of how the square is computed can be suppressed, to be considered at a
-later time.  Indeed, as far as the @code{good-enough?} procedure is concerned,
-@code{square} is not quite a procedure but rather an abstraction of a
-procedure, a so-called @newterm{procedural abstraction}.  At this level of
-abstraction, any procedure that computes the square is equally good.
+Por ejemplo, cuando definimos el procedimiento
+@code{aceptable?} en términos de @code{cuadrado}, podemos
+considerar al procedimiento @code{cuadrado} como una "caja negra". En
+ese momento, no nos preocupa @emph{cómo} el procedimiento calcula su
+resultado, sino simplemente el hecho de que calcula el cuadrado. Los
+detalles de cómo se calcula el cuadrado pueden ser suprimidos y
+considerados en otro momento. De hecho, para el procedimiento
+@code{aceptable?}, @code{cuadrado} no es exactamente un
+procedimiento, sino más bien una abstracción de un procedimiento,
+llamada @newterm{abstracción procedural}. A este nivel de abstracción,
+cualquier procedimiento que calcule el cuadrado es igualmente bueno.
 
-Thus, considering only the values they return, the following two procedures for
-squaring a number should be indistinguishable.  Each takes a numerical argument
-and produces the square of that number as the value.@footnote{It is not even
-clear which of these procedures is a more efficient implementation.  This
-depends upon the hardware available.  There are machines for which the
-``obvious'' implementation is the less efficient one.  Consider a machine that
-has extensive tables of logarithms and antilogarithms stored in a very
-efficient manner.}
+Por lo tanto, considerando solo los valores que devuelven, los
+siguientes dos procedimientos para elevar un número al cuadrado
+deberían ser indistinguibles. Cada uno toma un argumento numérico y
+produce el cuadrado de ese número como valor.@footnote{Ni siquiera
+está claro cuál de estos procedimientos es una implementación más
+eficiente. Esto depende del hardware disponible. Hay máquinas para las
+que la implementación ``obvia'' es la menos eficiente. Considere una
+máquina que tiene tablas extensas de logaritmos y antilogaritmos
+almacenados de manera muy eficiente.}
 
 @lisp
-(define (square x) (* x x))
-(define (square x) (exp (double (log x))))
-(define (double x) (+ x x))
+(definir (cuadrado x) (* x x))
+(definir (cuadrado x) (exp (doble (log x))))
+(definir (doble x) (+ x x))
 @end lisp
 
 @noindent
-So a procedure definition should be able to suppress detail.  The users of the
-procedure may not have written the procedure themselves, but may have obtained
-it from another programmer as a black box.  A user should not need to know how
-the procedure is implemented in order to use it.
+Entonces, la definición de un procedimiento debe ser capaz de suprimir
+los detalles. Los usuarios del procedimiento pueden no haber escrito
+el procedimiento ellos mismos, sino que lo pueden haber obtenido de
+otro programador como una caja negra. Un usuario no debería necesitar
+saber cómo se implementa el procedimiento para poder usarlo.
 
-@subsubheading Local names
+@subsubheading Nombres locales
 
-One detail of a procedure's implementation that should not matter to the user
-of the procedure is the implementer's choice of names for the procedure's
-formal parameters.  Thus, the following procedures should not be
-distinguishable:
+Un detalle de la implementación de un procedimiento que no debería
+importar al usuario del procedimiento es la elección de nombres por
+parte del implementador para los parámetros formales del
+procedimiento. Por lo tanto, los siguientes procedimientos no deberían
+ser distinguibles:
 
 @lisp
-(define (square x) (* x x))
-(define (square y) (* y y))
+(definir (cuadrado x) (* x x))
+(definir (cuadrado z) (* z z))
 @end lisp
 
 @noindent
-This principle---that the meaning of a procedure should be independent of the
-parameter names used by its author---seems on the surface to be self-evident,
-but its consequences are profound.  The simplest consequence is that the
-parameter names of a procedure must be local to the body of the procedure.  For
-example, we used @code{square} in the definition of @code{good-enough?} in our
-square-root procedure:
+Este principio---que el significado de un procedimiento debe ser
+independiente de los nombres de parámetros utilizados por su
+autor---parece ser evidente en la superficie, pero sus consecuencias
+son profundas. La consecuencia más simple es que los nombres de los
+parámetros de un procedimiento deben ser locales al cuerpo del
+procedimiento. Por ejemplo, usamos @code{cuadrado} en la definición de
+@code{aceptable?} en nuestro procedimiento de raíz
+cuadrada:
 
 @lisp
-(define (good-enough? guess x)
-  (< (abs (- (square guess) x))
+(definir (aceptable? estimacion x)
+  (< (abs (- (cuadrado estimacion) x))
      0.001))
 @end lisp
 
 @noindent
-The intention of the author of @code{good-enough?} is to determine if the
-square of the first argument is within a given tolerance of the second
-argument.  We see that the author of @code{good-enough?} used the name
-@code{guess} to refer to the first argument and @code{x} to refer to the second
-argument.  The argument of @code{square} is @code{guess}.  If the author of
-@code{square} used @code{x} (as above) to refer to that argument, we see that
-the @code{x} in @code{good-enough?} must be a different @code{x} than the one
-in @code{square}.  Running the procedure @code{square} must not affect the
-value of @code{x} that is used by @code{good-enough?}, because that value of
-@code{x} may be needed by @code{good-enough?} after @code{square} is done
-computing.
+La intención del autor de @code{aceptable?} es determinar
+si el cuadrado del primer argumento está dentro de una tolerancia dada
+del segundo argumento. Vemos que el autor de
+@code{aceptable?} usó el nombre @code{estimacion} para
+referirse al primer argumento y @code{x} para referirse al segundo
+argumento. El argumento de @code{cuadrado} es @code{estimacion}. Si el
+autor de @code{cuadrado} usó @code{x} (como se menciona arriba) para
+referirse a ese argumento, vemos que el @code{x} en
+@code{aceptable?} debe ser un @code{x} diferente al de
+@code{cuadrado}. Ejecutar el procedimiento @code{cuadrado} no debe
+afectar el valor de @code{x} que se usa por
+@code{aceptable?}, porque ese valor de @code{x} puede ser
+necesario por @code{aceptable?} después de que
+@code{cuadrado} termine de calcular.
 
-If the parameters were not local to the bodies of their respective procedures,
-then the parameter @code{x} in @code{square} could be confused with the
-parameter @code{x} in @code{good-enough?}, and the behavior of
-@code{good-enough?} would depend upon which version of @code{square} we used.
-Thus, @code{square} would not be the black box we desired.
+Si los parámetros no fueran locales a los cuerpos de sus respectivos
+procedimientos, entonces el parámetro @code{x} en @code{cuadrado}
+podría confundirse con el parámetro @code{x} en
+@code{aceptable?}, y el comportamiento de
+@code{aceptable?} dependería de qué versión de
+@code{cuadrado} se usara. Por lo tanto, @code{cuadrado} no sería la
+caja negra que deseamos.
 
-A formal parameter of a procedure has a very special role in the procedure
-definition, in that it doesn't matter what name the formal parameter has.  Such
-a name is called a @newterm{bound variable}, and we say that the procedure
-definition @newterm{binds} its formal parameters.  The meaning of a procedure
-definition is unchanged if a bound variable is consistently renamed throughout
-the definition.@footnote{The concept of consistent renaming is actually subtle
-and difficult to define formally.  Famous logicians have made embarrassing
-errors here.}  If a variable is not bound, we say that it is @newterm{free}.
-The set of expressions for which a binding defines a name is called the
-@newterm{scope} of that name.  In a procedure definition, the bound variables
-declared as the formal parameters of the procedure have the body of the
-procedure as their scope.
+Un parámetro formal de un procedimiento tiene un papel muy especial en
+la definición del procedimiento, ya que no importa qué nombre tenga el
+parámetro formal. Tal nombre se llama una @newterm{variable ligada}, y
+decimos que la definición del procedimiento @newterm{liga} sus
+parámetros formales. El significado de una definición de procedimiento
+no cambia si una variable ligada se renombra de manera consistente en
+toda la definición.@footnote{El concepto de renombrado consistente es
+en realidad sutil y difícil de definir formalmente. Los lógicos
+famosos han cometido errores vergonzosos aquí.} Si una variable no
+está ligada, decimos que es @newterm{libre}. El conjunto de
+expresiones para las cuales una ligazón define un nombre se llama el
+@newterm{ámbito} de ese nombre. En una definición de procedimiento,
+las variables ligadas declaradas como los parámetros formales del
+procedimiento tienen el cuerpo del procedimiento como su ámbito.
 
-In the definition of @code{good-enough?} above, @code{guess} and @code{x} are
-bound variables but @code{<}, @code{-}, @code{abs}, and @code{square} are free.
-The meaning of @code{good-enough?} should be independent of the names we choose
-for @code{guess} and @code{x} so long as they are distinct and different from
-@code{<}, @code{-}, @code{abs}, and @code{square}.  (If we renamed @code{guess}
-to @code{abs} we would have introduced a bug by @newterm{capturing} the
-variable @code{abs}.  It would have changed from free to bound.)  The meaning
-of @code{good-enough?} is not independent of the names of its free variables,
-however.  It surely depends upon the fact (external to this definition) that
-the symbol @code{abs} names a procedure for computing the absolute value of a
-number.  @code{good-enough?} will compute a different function if we substitute
-@code{cos} for @code{abs} in its definition.
+En la definición de @code{aceptable?} anterior,
+@code{estimacion} y @code{x} son variables ligadas, pero @code{<},
+@code{-}, @code{abs} y @code{cuadrado} son libres. El significado de
+@code{aceptable?} debería ser independiente de los nombres
+que elijamos para @code{estimacion} y @code{x}, siempre y cuando sean
+distintos y diferentes de @code{<}, @code{-}, @code{abs} y
+@code{cuadrado}. (Si renombráramos @code{estimacion} como @code{abs},
+habríamos introducido un error al @newterm{capturar} la variable
+@code{abs}. Habría cambiado de libre a ligada). Sin embargo, el
+significado de @code{aceptable?} no es independiente de
+los nombres de sus variables libres. Seguramente depende del hecho
+(externo a esta definición) de que el símbolo @code{abs} nombra a un
+procedimiento para calcular el valor absoluto de un número.
+@code{aceptable?} calculará una función diferente si
+sustituimos @code{cos} por @code{abs} en su definición.
 
-@subsubheading Internal definitions and block structure
+@subsubheading Definiciones internas y estructura de bloque
 
-We have one kind of name isolation available to us so far: The formal
-parameters of a procedure are local to the body of the procedure.  The
-square-root program illustrates another way in which we would like to control
-the use of names.  The existing program consists of separate procedures:
+Hasta ahora, tenemos un tipo de aislamiento de nombres disponible: los
+parámetros formales de un procedimiento son locales al cuerpo del
+procedimiento. El programa de la raíz cuadrada ilustra otra forma en
+la que nos gustaría controlar el uso de los nombres. El programa
+existente consiste en procedimientos separados:
 
 @lisp
-(define (sqrt x)
-  (sqrt-iter 1.0 x))
-(define (sqrt-iter guess x)
-  (if (good-enough? guess x)
-      guess
-      (sqrt-iter (improve guess x) x)))
-(define (good-enough? guess x)
-  (< (abs (- (square guess) x)) 0.001))
-(define (improve guess x)
-  (average guess (/ x guess)))
+(definir (raiz x)
+  (raiz-iterador 1.0 x))
+(definir (raiz-iterador estimacion x)
+  (si (aceptable? estimacion x)
+      estimacion
+      (raiz-iterador (mejorar estimacion x) x)))
+(definir (aceptable? estimacion x)
+  (< (abs (- (cuadrado estimacion) x)) 0.001))
+(definir (mejorar estimacion x)
+  (promedio estimacion (/ x estimacion)))
 @end lisp
 
 @noindent
-The problem with this program is that the only procedure that is important to
-users of @code{sqrt} is @code{sqrt}.  The other procedures (@code{sqrt-iter},
-@code{good-enough?}, and @code{improve}) only clutter up their minds.  They may
-not define any other procedure called @code{good-enough?} as part of another
-program to work together with the square-root program, because @code{sqrt}
-needs it.  The problem is especially severe in the construction of large
-systems by many separate programmers.  For example, in the construction of a
-large library of numerical procedures, many numerical functions are computed as
-successive approximations and thus might have procedures named
-@code{good-enough?} and @code{improve} as auxiliary procedures.  We would like
-to localize the subprocedures, hiding them inside @code{sqrt} so that
-@code{sqrt} could coexist with other successive approximations, each having its
-own private @code{good-enough?} procedure.  To make this possible, we allow a
-procedure to have internal definitions that are local to that procedure.  For
-example, in the square-root problem we can write
+El problema con este programa es que el único procedimiento que es
+importante para los usuarios de @code{raiz} es @code{raiz}. Los otros
+procedimientos (@code{raiz-iterador}, @code{aceptable?} y
+@code{improve}) solo llenan sus mentes de desorden. Es posible que no
+definan ningún otro procedimiento llamado
+@code{aceptable?} como parte de otro programa para
+trabajar junto con el programa de raíz cuadrada, porque @code{raiz} lo
+necesita. El problema es especialmente grave en la construcción de
+grandes sistemas por muchos programadores separados. Por ejemplo, en
+la construcción de una gran biblioteca de procedimientos numéricos,
+muchas funciones numéricas se calculan como aproximaciones sucesivas
+y, por lo tanto, pueden tener procedimientos llamados
+@code{aceptable?} e @code{improve} como procedimientos
+auxiliares. Nos gustaría localizar los subprocedimientos, ocultándolos
+dentro de @code{raiz} para que @code{raiz} pudiera coexistir con otras
+aproximaciones sucesivas, cada una con su propio procedimiento privado
+@code{aceptable?}. Para hacer esto posible, permitimos que
+un procedimiento tenga definiciones internas que sean locales a ese
+procedimiento. Por ejemplo, en el problema de la raíz cuadrada,
+podemos escribir:
 
 @lisp
-(define (sqrt x)
-  (define (good-enough? guess x)
-    (< (abs (- (square guess) x)) 0.001))
-  (define (improve guess x) (average guess (/ x guess)))
-  (define (sqrt-iter guess x)
-    (if (good-enough? guess x)
-        guess
-        (sqrt-iter (improve guess x) x)))
-  (sqrt-iter 1.0 x))
+(definir (raiz x)
+  (definir (aceptable? estimacion x)
+    (< (abs (- (cuadrado estimacion) x)) 0.001))
+  (definir (mejorar estimacion x) (promedio estimacion (/ x estimacion)))
+  (definir (raiz-iterador estimacion x)
+    (si (aceptable? estimacion x)
+        estimacion
+        (raiz-iterador (mejorar estimacion x) x)))
+  (raiz-iterador 1.0 x))
 @end lisp
 
 @noindent
-Such nesting of definitions, called @newterm{block structure}, is basically the
-right solution to the simplest name-packaging problem.  But there is a better
-idea lurking here.  In addition to internalizing the definitions of the
-auxiliary procedures, we can simplify them.  Since @code{x} is bound in the
-definition of @code{sqrt}, the procedures @code{good-enough?}, @code{improve},
-and @code{sqrt-iter}, which are defined internally to @code{sqrt}, are in the
-scope of @code{x}.  Thus, it is not necessary to pass @code{x} explicitly to
-each of these procedures.  Instead, we allow @code{x} to be a free variable in
-the internal definitions, as shown below. Then @code{x} gets its value from the
-argument with which the enclosing procedure @code{sqrt} is called.  This
-discipline is called @newterm{lexical scoping}.@footnote{Lexical scoping dictates
-that free variables in a procedure are taken to refer to bindings made by enclosing
-procedure definitions; that is, they are looked up in the environment in which the
-procedure was defined. We will see how this works in detail in chapter 3 when we study
-environments and the detailed behavior of the interpreter.@anchor{Footnote 28}}
+La anidación de definiciones, llamada @newterm{estructura de bloques},
+es básicamente la solución correcta al problema más simple de
+empaquetado de nombres. Pero aquí hay una idea mejor. Además de
+internalizar las definiciones de los procedimientos auxiliares,
+podemos simplificarlos. Dado que @code{x} está vinculado en la
+definición de @code{raiz}, los procedimientos
+@code{aceptable?}, @code{mejorar} y @code{raiz-iterador},
+que se definen internamente en @code{raiz}, están en el ámbito de
+@code{x}. Por lo tanto, no es necesario pasar @code{x} explícitamente
+a cada uno de estos procedimientos. En cambio, permitimos que @code{x}
+sea una variable libre en las definiciones internas, como se muestra a
+continuación. Entonces, @code{x} obtiene su valor del argumento con el
+que se llama al procedimiento envolvente @code{raiz}. Esta disciplina
+se llama @newterm{ámbito léxico}. @footnote{El ámbito léxico dicta que
+las variables libres en un procedimiento se refieren a las
+asignaciones hechas por las definiciones de procedimientos que lo
+rodean; es decir, se buscan en el entorno en el que se definió el
+procedimiento. Veremos cómo funciona esto en detalle en el capítulo 3
+cuando estudiemos los entornos y el comportamiento detallado del
+intérprete. @anchor{Footnote 28}}
 
 @lisp
-(define (sqrt x)
-  (define (good-enough? guess)
-    (< (abs (- (square guess) x)) 0.001))
-  (define (improve guess)
-    (average guess (/ x guess)))
-  (define (sqrt-iter guess)
-    (if (good-enough? guess)
-        guess
-        (sqrt-iter (improve guess))))
-  (sqrt-iter 1.0))
+(definir (raiz x)
+  (definir (aceptable? estimacion)
+    (< (abs (- (cuadrado estimacion) x)) 0.001))
+  (definir (mejorar estimacion)
+    (promedio estimacion (/ x estimacion)))
+  (definir (raiz-iterador estimacion)
+    (si (aceptable? estimacion)
+        estimacion
+        (raiz-iterador (mejorar estimacion))))
+  (raiz-iterador 1.0))
 @end lisp
 
 \enlargethispage{\baselineskip}
 
 @noindent
-We will use block structure extensively to help us break up large
-programs into tractable pieces.@footnote{Embedded definitions must come
-first in a procedure body. The management is not responsible for the
-consequences of running programs that intertwine definition and use.}
-The idea of block structure originated with the programming language
-Algol 60. It appears in most advanced programming languages and is an
-important tool for helping to organize the construction of large
-programs.
+Utilizaremos la estructura de bloques extensamente para ayudarnos a
+dividir programas grandes en piezas manejables.@footnote{Las
+definiciones incrustadas deben venir primero en el cuerpo de un
+procedimiento. La dirección no se hace responsable de las
+consecuencias de ejecutar programas que entrelacen definición y uso.}
+La idea de la estructura de bloques se originó con el lenguaje de
+programación Algol 60. Aparece en la mayoría de los lenguajes de
+programación avanzados y es una herramienta importante para ayudar a
+organizar la construcción de programas grandes.
 
-@section Procedures and the Processes They @w{Generate}
-@node	1.2, 1.3, 1.1, Chapter 1
+@section Procedimientos y los Procesos que @w{Generan}
+@node 1.2, 1.3, 1.1, Capítulo 1
 
-We have now considered the elements of programming: We have used primitive
-arithmetic operations, we have combined these operations, and we have
-abstracted these composite operations by defining them as compound procedures.
-But that is not enough to enable us to say that we know how to program.  Our
-situation is analogous to that of someone who has learned the rules for how the
-pieces move in chess but knows nothing of typical openings, tactics, or
-strategy.  Like the novice chess player, we don't yet know the common patterns
-of usage in the domain.  We lack the knowledge of which moves are worth making
-(which procedures are worth defining).  We lack the experience to predict the
-consequences of making a move (executing a procedure).
+Ahora hemos considerado los elementos de la programación: hemos
+utilizado operaciones aritméticas primitivas, hemos combinado estas
+operaciones y hemos abstraído estas operaciones compuestas mediante la
+definición de procedimientos compuestos. Pero eso no es suficiente
+para permitirnos decir que sabemos cómo programar. Nuestra situación
+es análoga a la de alguien que ha aprendido las reglas de cómo se
+mueven las piezas en el ajedrez pero no sabe nada de aperturas
+típicas, tácticas o estrategias. Como el jugador de ajedrez novato,
+aún no conocemos los patrones comunes de uso en el dominio. Nos falta
+el conocimiento de qué movimientos vale la pena hacer (qué
+procedimientos vale la pena definir). Nos falta la experiencia para
+predecir las consecuencias de hacer un movimiento (ejecutar un
+procedimiento).
 
-The ability to visualize the consequences of the actions under consideration is
-crucial to becoming an expert programmer, just as it is in any synthetic,
-creative activity.  In becoming an expert photographer, for example, one must
-learn how to look at a scene and know how dark each region will appear on a
-print for each possible choice of exposure and development conditions.  Only
-then can one reason backward, planning framing, lighting, exposure, and
-development to obtain the desired effects.  So it is with programming, where we
-are planning the course of action to be taken by a process and where we control
-the process by means of a program.  To become experts, we must learn to
-visualize the processes generated by various types of procedures.  Only after
-we have developed such a skill can we learn to reliably construct programs that
-exhibit the desired behavior.
+La capacidad de visualizar las consecuencias de las acciones
+consideradas es crucial para convertirse en un programador experto,
+tal como lo es en cualquier actividad sintética y creativa. Al
+convertirse en un fotógrafo experto, por ejemplo, se debe aprender a
+mirar una escena y saber cuán oscuro aparecerá cada región en una
+impresión para cada posible elección de condiciones de exposición y
+revelado. Solo entonces se puede razonar hacia atrás, planificando el
+encuadre, la iluminación, la exposición y el revelado para obtener los
+efectos deseados. Así es con la programación, donde estamos planeando
+el curso de acción que tomará un proceso y donde controlamos el
+proceso mediante un programa. Para convertirnos en expertos, debemos
+aprender a visualizar los procesos generados por varios tipos de
+procedimientos. Solo después de haber desarrollado dicha habilidad
+podemos aprender a construir programas de manera confiable que exhiban
+el comportamiento deseado.
 
-A procedure is a pattern for the @newterm{local evolution} of a computational
-process.  It specifies how each stage of the process is built upon the previous
-stage.  We would like to be able to make statements about the overall, or
-@newterm{global}, behavior of a process whose local evolution has been
-specified by a procedure.  This is very difficult to do in general, but we can
-at least try to describe some typical patterns of process evolution.
+Un procedimiento es un patrón para la @newterm{evolución local} de un
+proceso computacional. Especifica cómo se construye cada etapa del
+proceso sobre la etapa anterior. Nos gustaría poder hacer afirmaciones
+sobre el comportamiento general, o @newterm{global}, de un proceso
+cuya evolución local ha sido especificada por un procedimiento. Esto
+es muy difícil de hacer en general, pero al menos podemos intentar
+describir algunos patrones típicos de evolución del proceso.
 
-In this section we will examine some common ``shapes'' for processes generated
-by simple procedures.  We will also investigate the rates at which these
-processes consume the important computational resources of time and space.  The
-procedures we will consider are very simple.  Their role is like that played by
-test patterns in photography: as oversimplified prototypical patterns, rather
-than practical examples in their own right.
+En esta sección examinaremos algunas formas comunes de procesos
+generados por procedimientos simples. También investigaremos las tasas
+a las que estos procesos consumen los recursos computacionales
+importantes de tiempo y espacio. Los procedimientos que consideraremos
+son muy simples. Su papel es similar al desempeñado por los patrones
+de prueba en la fotografía: como patrones prototípicos demasiado
+simplificados, en lugar de ejemplos prácticos en sí mismos.
 
 @menu
 * 1-2-1::            Linear Recursion and Iteration
@@ -3204,7 +3319,7 @@ to @math{\varphi^n / \sqrt{5}}, where
 @ifinfo
 
 @example
-[phi] = (1 + [sqrt]5)/2 ~= 1.6180
+[phi] = (1 + [raiz]5)/2 ~= 1.6180
 @end example
 
 @end ifinfo
@@ -4251,7 +4366,7 @@ difficulty doing @ref{Exercise 1.24}.  His @code{fast-prime?} test seems to run
 more slowly than his @code{prime?} test.  Louis calls his friend Eva Lu Ator
 over to help.  When they examine Louis's code, they find that he has rewritten
 the @code{expmod} procedure to use an explicit multiplication, rather than
-calling @code{square}:
+calling @code{cuadrado}:
 
 @lisp
 (define (expmod base exp m)
@@ -5193,7 +5308,7 @@ that is, the function whose value at @math{y} is @math{x / y}.} @math{y \mapsto 
 and we can therefore try to compute square roots as
 
 @lisp
-(define (sqrt x)
+(define (raiz x)
   (fixed-point (lambda (y) (/ x y))
                1.0))
 @end lisp
@@ -5215,7 +5330,7 @@ guesses is simply the process of looking for a fixed point of
 @math{y \mapsto {1\over2}(y + x / y)}:
 
 @lisp
-(define (sqrt x)
+(define (raiz x)
   (fixed-point (lambda (y) (average y (/ x y)))
                1.0))
 @end lisp
@@ -5382,7 +5497,7 @@ We can express the idea of average damping by means of the following procedure:
 @code{average-damp} is a procedure that takes as its argument a procedure
 @code{f} and returns as its value a procedure (produced by the @code{lambda})
 that, when applied to a number @code{x}, produces the average of @code{x} and
-@code{(f x)}.  For example, applying @code{average-damp} to the @code{square}
+@code{(f x)}.  For example, applying @code{average-damp} to the @code{cuadrado}
 procedure produces a procedure whose value at some number @math{x} is the average
 of @math{x} and @math{x^2}.  Applying this resulting procedure to 10 returns the
 average of 10 and 100, or 55:@footnote{Observe that this is a combination whose
@@ -5401,7 +5516,7 @@ Using @code{average-damp}, we can reformulate the square-root procedure as
 follows:
 
 @lisp
-(define (sqrt x)
+(define (raiz x)
   (fixed-point (average-damp (lambda (y) (/ x y)))
                1.0))
 @end lisp
@@ -5532,7 +5647,7 @@ from any starting point.}
 This provides yet another form of the square-root procedure:
 
 @lisp
-(define (sqrt x)
+(define (raiz x)
   (newtons-method
    (lambda (y) (- (square y) x)) 1.0))
 @end lisp
@@ -5561,7 +5676,7 @@ this section (where we look for a fixed point of the average-damped version of
 @math{y \mapsto x / y}) as an instance of this general method:
 
 @lisp
-(define (sqrt x)
+(define (raiz x)
   (fixed-point-of-transform
    (lambda (y) (/ x y)) average-damp 1.0))
 @end lisp
@@ -5572,7 +5687,7 @@ Similarly, we can express the second square-root computation from this section
 transform of @math{y \mapsto y^2 - x}) as
 
 @lisp
-(define (sqrt x)
+(define (raiz x)
   (fixed-point-of-transform
    (lambda (y) (- (square y) x)) newton-transform 1.0))
 @end lisp
@@ -5732,7 +5847,7 @@ process using the improved guess as the new guess.  Write a procedure
 telling whether a guess is good enough and a method for improving a guess.
 @code{iterative-improve} should return as its value a procedure that takes a
 guess as argument and keeps improving the guess until it is good enough.
-Rewrite the @code{sqrt} procedure of @ref{1.1.7} and the
+Rewrite the @code{raiz} procedure of @ref{1.1.7} and the
 @code{fixed-point} procedure of @ref{1.3.3} in terms of
 @code{iterative-improve}.
 @end quotation
@@ -7932,7 +8047,7 @@ which implements part of the program plan, as shown in @ref{Figure 2.7}.  In
 a ``signal'' consisting of the leaves of a given tree.  This signal is passed
 through a @newterm{filter}, which eliminates all but the odd elements.  The
 resulting signal is in turn passed through a @newterm{map}, which is a
-``transducer'' that applies the @code{square} procedure to each element.  The
+``transducer'' that applies the @code{cuadrado} procedure to each element.  The
 output of the map is then fed to an @newterm{accumulator}, which combines the
 elements using @code{+}, starting from an initial 0.  The plan for
 @code{even-fibs} is analogous.
@@ -11354,7 +11469,7 @@ representation is therefore given by the following selectors and constructors:
 (define (real-part z) (car z))
 (define (imag-part z) (cdr z))
 (define (magnitude z)
-  (sqrt (+ (square (real-part z))
+  (raiz (+ (square (real-part z))
            (square (imag-part z)))))
 (define (angle z)
   (atan (imag-part z) (real-part z)))
@@ -11375,7 +11490,7 @@ representation is:
 (define (magnitude z) (car z))
 (define (angle z) (cdr z))
 (define (make-from-real-imag x y)
-  (cons (sqrt (+ (square x) (square y)))
+  (cons (raiz (+ (square x) (square y)))
         (atan y x)))
 (define (make-from-mag-ang r a) (cons r a))
 @end lisp
@@ -11456,7 +11571,7 @@ names of hers.  Here is Ben's revised rectangular representation from
 (define (real-part-rectangular z) (car z))
 (define (imag-part-rectangular z) (cdr z))
 (define (magnitude-rectangular z)
-  (sqrt (+ (square (real-part-rectangular z))
+  (raiz (+ (square (real-part-rectangular z))
            (square (imag-part-rectangular z)))))
 (define (angle-rectangular z)
   (atan (imag-part-rectangular z)
@@ -11480,7 +11595,7 @@ and here is Alyssa's revised polar representation:
 (define (angle-polar z) (cdr z))
 (define (make-from-real-imag-polar x y)
   (attach-tag 'polar
-              (cons (sqrt (+ (square x) (square y)))
+              (cons (raiz (+ (square x) (square y)))
                     (atan y x))))
 (define (make-from-mag-ang-polar r a)
   (attach-tag 'polar (cons r a)))
@@ -11724,7 +11839,7 @@ numbers.  This is accomplished by calling the following procedure:
   (define (imag-part z) (cdr z))
   (define (make-from-real-imag x y) (cons x y))
   (define (magnitude z)
-    (sqrt (+ (square (real-part z))
+    (raiz (+ (square (real-part z))
              (square (imag-part z)))))
   (define (angle z)
     (atan (imag-part z) (real-part z)))
@@ -11772,7 +11887,7 @@ Alyssa's polar package is analogous:
   (define (real-part z) (* (magnitude z) (cos (angle z))))
   (define (imag-part z) (* (magnitude z) (sin (angle z))))
   (define (make-from-real-imag x y)
-    (cons (sqrt (+ (square x) (square y)))
+    (cons (raiz (+ (square x) (square y)))
           (atan y x)))
   @r{;; interface to the rest of the system}
   (define (tag x) (attach-tag 'polar x))
@@ -11995,7 +12110,7 @@ operation name and performs the operation indicated.  In such a discipline,
   (define (dispatch op)
     (cond ((eq? op 'real-part) x)
           ((eq? op 'imag-part) y)
-          ((eq? op 'magnitude) (sqrt (+ (square x) (square y))))
+          ((eq? op 'magnitude) (raiz (+ (square x) (square y))))
           ((eq? op 'angle) (atan y x))
           (else (error "Unknown op: MAKE-FROM-REAL-IMAG" op))))
   dispatch)
@@ -14035,10 +14150,10 @@ special symbol @code{how-many-calls?}, then @code{mf} returns the value of the
 counter.  If the input is the special symbol @code{reset-count}, then @code{mf}
 resets the counter to zero.  For any other input, @code{mf} returns the result
 of calling @code{f} on that input and increments the counter.  For instance, we
-could make a monitored version of the @code{sqrt} procedure:
+could make a monitored version of the @code{raiz} procedure:
 
 @lisp
-(define s (make-monitored sqrt))
+(define s (make-monitored raiz))
 (s 100)
 @i{10}
 (s 'how-many-calls?)
@@ -14158,7 +14273,7 @@ trials in which the experiment was found to be true.
 
 @lisp
 (define (estimate-pi trials)
-  (sqrt (/ 6 (monte-carlo trials cesaro-test))))
+  (raiz (/ 6 (monte-carlo trials cesaro-test))))
 (define (cesaro-test)
    (= (gcd (rand) (rand)) 1))
 
@@ -14182,7 +14297,7 @@ assignment to model local state:
 
 @lisp
 (define (estimate-pi trials)
-  (sqrt (/ 6 (random-gcd-test trials random-init))))
+  (raiz (/ 6 (random-gcd-test trials random-init))))
 (define (random-gcd-test trials initial-x)
   (define (iter trials-remaining trials-passed x)
     (let ((x1 (rand-update x)))
@@ -14816,7 +14931,7 @@ have been equivalent to have used
 @end lisp
 
 @noindent
-which evaluates @code{(lambda (x) (* x x))} and binds @code{square} to the
+which evaluates @code{(lambda (x) (* x x))} and binds @code{cuadrado} to the
 resulting value, all in the global environment.
 
 @ref{Figure 3.2} shows the result of evaluating this @code{define} expression.
@@ -14825,7 +14940,7 @@ formal parameter, namely @code{x}, and a procedure body @code{(* x x)}.  The
 environment part of the procedure is a pointer to the global environment, since
 that is the environment in which the λ-expression was evaluated to
 produce the procedure. A new binding, which associates the procedure object
-with the symbol @code{square}, has been added to the global frame.  In general,
+with the symbol @code{cuadrado}, has been added to the global frame.  In general,
 @code{define} creates definitions by adding bindings to frames.
 
 @float
@@ -14872,13 +14987,13 @@ environment, evaluate the procedure body.
 
 To show how this rule is followed, @ref{Figure 3.3} illustrates the environment
 structure created by evaluating the expression @code{(square 5)} in the global
-environment, where @code{square} is the procedure generated in @ref{Figure 3.2}.
+environment, where @code{cuadrado} is the procedure generated in @ref{Figure 3.2}.
 Applying the procedure results in the creation of a new environment,
 labeled E1 in the figure, that begins with a frame in which @code{x}, the
 formal parameter for the procedure, is bound to the argument 5.  The pointer
 leading upward from this frame shows that the frame's enclosing environment is
 the global environment.  The global environment is chosen here, because this is
-the environment that is indicated as part of the @code{square} procedure
+the environment that is indicated as part of the @code{cuadrado} procedure
 object.  Within E1, we evaluate the body of the procedure, @code{(* x x)}.
 Since the value of @code{x} in E1 is 5, the result is @code{(* 5 5)}, or 25.
 
@@ -14971,16 +15086,16 @@ definitions:
 @lisp
 (define (square x)
   (* x x))
-(define (sum-of-squares x y)
+(define (suma-de-cuadrados x y)
   (+ (square x) (square y)))
 (define (f a)
-  (sum-of-squares (+ a 1) (* a 2)))
+  (suma-de-cuadrados (+ a 1) (* a 2)))
 @end lisp
 
 @noindent
 We can analyze the same example using the environment model.  @ref{Figure 3.4}
 shows the three procedure objects created by evaluating the definitions of
-@code{f}, @code{square}, and @code{sum-of-squares} in the global environment.
+@code{f}, @code{cuadrado}, and @code{suma-de-cuadrados} in the global environment.
 Each procedure object consists of some code, together with a pointer to the
 global environment.
 
@@ -14992,7 +15107,7 @@ global environment.
 
 @example
           +--------------------------------------------+
-          | sum-of-squares:                            |
+          | suma-de-cuadrados:                            |
 global -->| square:                                    |
 env       | f: --+                                     |
           +------|--------------+--------------+-------+
@@ -15005,7 +15120,7 @@ env       | f: --+                                     |
                |              |              |
                V              V              V
    parameters: a          parameters: x  parameters: x, y
-   body: (sum-of-squares  body: (* x x)  body: (+ (square x)
+   body: (suma-de-cuadrados  body: (* x x)  body: (+ (square x)
            (+ a 1)                                (square y))
            (* a 2))
 @end example
@@ -15026,14 +15141,14 @@ beginning with a frame in which @code{a}, the formal parameter of @code{f}, is
 bound to the argument 5.  In E1, we evaluate the body of @code{f}:
 
 @lisp
-(sum-of-squares (+ a 1) (* a 2))
+(suma-de-cuadrados (+ a 1) (* a 2))
 @end lisp
 
 @noindent
 To evaluate this combination, we first evaluate the subexpressions.  The first
-subexpression, @code{sum-of-squares}, has a value that is a procedure object.
+subexpression, @code{suma-de-cuadrados}, has a value that is a procedure object.
 (Notice how this value is found: We first look in the first frame of E1, which
-contains no binding for @code{sum-of-squares}.  Then we proceed to the
+contains no binding for @code{suma-de-cuadrados}.  Then we proceed to the
 enclosing environment, i.e. the global environment, and find the binding shown
 in @ref{Figure 3.4}.)  The other two subexpressions are evaluated by applying
 the primitive operations @code{+} and @code{*} to evaluate the two combinations
@@ -15041,17 +15156,17 @@ the primitive operations @code{+} and @code{*} to evaluate the two combinations
 
 \enlargethispage{\baselineskip}
 
-Now we apply the procedure object @code{sum-of-squares} to the arguments 6 and
+Now we apply the procedure object @code{suma-de-cuadrados} to the arguments 6 and
 10.  This results in a new environment E2 in which the formal parameters
 @code{x} and @code{y} are bound to the arguments.  Within E2 we evaluate the
 combination @code{(+ (square x) (square y))}.  This leads us to evaluate
-@code{(square x)}, where @code{square} is found in the global frame and
+@code{(square x)}, where @code{cuadrado} is found in the global frame and
 @code{x} is 6.  Once again, we set up a new environment, E3, in which @code{x}
-is bound to 6, and within this we evaluate the body of @code{square}, which is
-@code{(* x x)}.  Also as part of applying @code{sum-of-squares}, we must
+is bound to 6, and within this we evaluate the body of @code{cuadrado}, which is
+@code{(* x x)}.  Also as part of applying @code{suma-de-cuadrados}, we must
 evaluate the subexpression @code{(square y)}, where @code{y} is 10.  This
-second call to @code{square} creates another environment, E4, in which
-@code{x}, the formal parameter of @code{square}, is bound to 10.  And within E4
+second call to @code{cuadrado} creates another environment, E4, in which
+@code{x}, the formal parameter of @code{cuadrado}, is bound to 10.  And within E4
 we must evaluate @code{(* x x)}.
 
 @float
@@ -15071,7 +15186,7 @@ env       +-----------------------------------------------------+
   E1 -->| a: 5 |  E2 ->| x: 6  |  E3 -->| x: 6 |  E4 -->| x: 10 |
         |      |       | y: 10 |        |      |        |       |
         +------+       +-------+        +------+        +-------+
-   (sum-of-squares   (+ (square x)       (* x x)         (* x x)
+   (suma-de-cuadrados   (+ (square x)       (* x x)         (* x x)
      (+ a 1)            (square u))
      (+ a 2))
 @end example
@@ -15086,15 +15201,15 @@ env       +-----------------------------------------------------+
 @c @end quotation
 @end float
 
-The important point to observe is that each call to @code{square} creates a new
+The important point to observe is that each call to @code{cuadrado} creates a new
 environment containing a binding for @code{x}.  We can see here how the
 different frames serve to keep separate the different local variables all named
-@code{x}.  Notice that each frame created by @code{square} points to the global
-environment, since this is the environment indicated by the @code{square}
+@code{x}.  Notice that each frame created by @code{cuadrado} points to the global
+environment, since this is the environment indicated by the @code{cuadrado}
 procedure object.
 
 After the subexpressions are evaluated, the results are returned.  The values
-generated by the two calls to @code{square} are added by @code{sum-of-squares},
+generated by the two calls to @code{cuadrado} are added by @code{suma-de-cuadrados},
 and this result is returned by @code{f}.  Since our focus here is on the
 environment structures, we will not dwell on how these returned values are
 passed from call to call; however, this is also an important aspect of the
@@ -15497,101 +15612,101 @@ definitions, thus leading to a block structure as in the following procedure to
 compute square roots:
 
 @lisp
-(define (sqrt x)
-  (define (good-enough? guess)
+(define (raiz x)
+  (define (aceptable? guess)
     (< (abs (- (square guess) x)) 0.001))
   (define (improve guess)
     (average guess (/ x guess)))
-  (define (sqrt-iter guess)
-    (if (good-enough? guess)
+  (define (raiz-iterador guess)
+    (if (aceptable? guess)
         guess
-        (sqrt-iter (improve guess))))
-  (sqrt-iter 1.0))
+        (raiz-iterador (improve guess))))
+  (raiz-iterador 1.0))
 @end lisp
 
 @noindent
 Now we can use the environment model to see why these internal definitions
 behave as desired.  @ref{Figure 3.11} shows the point in the evaluation of the
-expression @code{(sqrt 2)} where the internal procedure @code{good-enough?} has
-been called for the first time with @code{guess} equal to 1.
+expression @code{(raiz 2)} where the internal procedure @code{aceptable?} has
+been called for the first time with @code{estimacion} equal to 1.
 
-Observe the structure of the environment.  @code{sqrt} is a symbol in the
+Observe the structure of the environment.  @code{raiz} is a symbol in the
 global environment that is bound to a procedure object whose associated
-environment is the global environment.  When @code{sqrt} was called, a new
+environment is the global environment.  When @code{raiz} was called, a new
 environment E1 was formed, subordinate to the global environment, in which the
-parameter @code{x} is bound to 2.  The body of @code{sqrt} was then evaluated
-in E1.  Since the first expression in the body of @code{sqrt} is
+parameter @code{x} is bound to 2.  The body of @code{raiz} was then evaluated
+in E1.  Since the first expression in the body of @code{raiz} is
 
 @lisp
-(define (good-enough? guess)
+(define (aceptable? guess)
   (< (abs (- (square guess) x)) 0.001))
 @end lisp
 
 @noindent
-evaluating this expression defined the procedure @code{good-enough?}  in the
-environment E1.  To be more precise, the symbol @code{good-enough?} was added
+evaluating this expression defined the procedure @code{aceptable?}  in the
+environment E1.  To be more precise, the symbol @code{aceptable?} was added
 to the first frame of E1, bound to a procedure object whose associated
-environment is E1.  Similarly, @code{improve} and @code{sqrt-iter} were defined
+environment is E1.  Similarly, @code{improve} and @code{raiz-iterador} were defined
 as procedures in E1.  For conciseness, @ref{Figure 3.11} shows only the
-procedure object for @code{good-enough?}.
+procedure object for @code{aceptable?}.
 
 @float
 @c @quotation
 @anchor{Figure 3.11}
 @ifinfo
-@strong{Figure 3.11:} @code{sqrt} procedure with internal definitions.
+@strong{Figure 3.11:} @code{raiz} procedure with internal definitions.
 
 @example
           +--------------------------------------------------+
-global -->| sqrt: --+                                        |
+global -->| raiz: --+                                        |
 env       |         |                                        |
           +---------|----------------------------------------+
                     V       ^                   ^
                 .---.---.   |                   |
      +----------+-O | O-+---+        +----------+------------+
      |          `---^---'            | x: 2                  |
-     V                         E1 -->| good-enough?: -+      |
+     V                         E1 -->| aceptable?: -+      |
 parameters: x                        | improve: ...   |      |
-body: (define good-enough? ...)      | sqrt-iter: ... |      |
+body: (define aceptable? ...)      | raiz-iterador: ... |      |
       (define improve ...)           +----------------|------+
-      (define sqrt-iter ...)          ^  ^            |     ^
-      (sqrt-iter 1.0)                 |  |            V     |
+      (define raiz-iterador ...)          ^  ^            |     ^
+      (raiz-iterador 1.0)                 |  |            V     |
                             +---------++ |        .---.---. |
                       E2 -->| guess: 1 | |        | O | O-+-+
                             +----------+ |        `-|-^---'
-                      call to sqrt-iter  |          |
+                      call to raiz-iterador  |          |
                                          |          V
                                +---------++    parameters: guess
                          E3 -->| guess: 1 |    body: (< (abs ...)
                                +----------+             ...)
-                         call to good-enough?
+                         call to aceptable?
 @end example
 @end ifinfo
 @iftex
 @sp 0.5
 @center @image{fig/chap3/Fig3.11a,107mm,,,.pdf}
 @sp 0.7
-@center @caption{@strong{Figure 3.11:} @code{sqrt} procedure with internal definitions.}
+@center @caption{@strong{Figure 3.11:} @code{raiz} procedure with internal definitions.}
 @sp 0.7
 @end iftex
 @c @end quotation
 @end float
 
-After the local procedures were defined, the expression @code{(sqrt-iter 1.0)}
+After the local procedures were defined, the expression @code{(raiz-iterador 1.0)}
 was evaluated, still in environment E1.  So the procedure object bound to
-@code{sqrt-iter} in E1 was called with 1 as an argument.  This created an
-environment E2 in which @code{guess}, the parameter of @code{sqrt-iter}, is
-bound to 1.  @code{sqrt-iter} in turn called @code{good-enough?} with the value
-of @code{guess} (from E2) as the argument for @code{good-enough?}.  This set up
-another environment, E3, in which @code{guess} (the parameter of
-@code{good-enough?}) is bound to 1.  Although @code{sqrt-iter} and
-@code{good-enough?} both have a parameter named @code{guess}, these are two
+@code{raiz-iterador} in E1 was called with 1 as an argument.  This created an
+environment E2 in which @code{estimacion}, the parameter of @code{raiz-iterador}, is
+bound to 1.  @code{raiz-iterador} in turn called @code{aceptable?} with the value
+of @code{estimacion} (from E2) as the argument for @code{aceptable?}.  This set up
+another environment, E3, in which @code{estimacion} (the parameter of
+@code{aceptable?}) is bound to 1.  Although @code{raiz-iterador} and
+@code{aceptable?} both have a parameter named @code{estimacion}, these are two
 distinct local variables located in different frames.  Also, E2 and E3 both
-have E1 as their enclosing environment, because the @code{sqrt-iter} and
-@code{good-enough?} procedures both have E1 as their environment part.  One
+have E1 as their enclosing environment, because the @code{raiz-iterador} and
+@code{aceptable?} procedures both have E1 as their environment part.  One
 consequence of this is that the symbol @code{x} that appears in the body of
-@code{good-enough?} will reference the binding of @code{x} that appears in E1,
-namely the value of @code{x} with which the original @code{sqrt} procedure was
+@code{aceptable?} will reference the binding of @code{x} that appears in E1,
+namely the value of @code{x} with which the original @code{raiz} procedure was
 called.
 
 The environment model thus explains the two key properties that make local
@@ -20510,12 +20625,12 @@ and better guesses for the square root of @math{x} by applying over and over aga
 the procedure that improves guesses:
 
 @lisp
-(define (sqrt-improve guess x)
+(define (raiz-improve guess x)
   (average guess (/ x guess)))
 @end lisp
 
 @noindent
-In our original @code{sqrt} procedure, we made these guesses be the successive
+In our original @code{raiz} procedure, we made these guesses be the successive
 values of a state variable. Instead we can generate the infinite stream of
 guesses, starting with an initial guess of 1:@footnote{We can't use @code{let}
 to bind the local variable @code{guesses}, because the value of @code{guesses}
@@ -20523,15 +20638,15 @@ depends on @code{guesses} itself.  @ref{Exercise 3.63} addresses why we want a
 local variable here.}
 
 @lisp
-(define (sqrt-stream x)
+(define (raiz-stream x)
   (define guesses
     (cons-stream
      1.0
-     (stream-map (lambda (guess) (sqrt-improve guess x))
+     (stream-map (lambda (guess) (raiz-improve guess x))
                  guesses)))
   guesses)
 
-(display-stream (sqrt-stream 2))
+(display-stream (raiz-stream 2))
 @i{1.}
 @i{1.5}
 @i{1.4166666666666665}
@@ -20722,15 +20837,15 @@ manipulated with a uniform set of operations.
 
 @quotation
 @strong{@anchor{Exercise 3.63}Exercise 3.63:} Louis Reasoner asks why the
-@code{sqrt-stream} procedure was not written in the following more
+@code{raiz-stream} procedure was not written in the following more
 straightforward way, without the local variable @code{guesses}:
 
 @lisp
-(define (sqrt-stream x)
+(define (raiz-stream x)
   (cons-stream 1.0 (stream-map
                     (lambda (guess)
-                      (sqrt-improve guess x))
-                    (sqrt-stream x))))
+                      (raiz-improve guess x))
+                    (raiz-stream x))))
 @end lisp
 
 Alyssa P. Hacker replies that this version of the procedure is considerably
@@ -20749,8 +20864,8 @@ the second of the two elements.  Using this, we could compute square roots up
 to a given tolerance by
 
 @lisp
-(define (sqrt x tolerance)
-  (stream-limit (sqrt-stream x) tolerance))
+(define (raiz x tolerance)
+  (stream-limit (raiz-stream x) tolerance))
 @end lisp
 @end quotation
 
@@ -21793,7 +21908,7 @@ into the @code{pi} stream:
       (next passed (+ failed 1))))
 (define pi
   (stream-map
-   (lambda (p) (sqrt (/ 6 p)))
+   (lambda (p) (raiz (/ 6 p)))
    (monte-carlo cesaro-stream 0 0)))
 @end lisp
 
@@ -25243,7 +25358,7 @@ possibilities that must be explored.)
     (let ((j (an-integer-between i high)))
       (let ((ksq (+ (* i i) (* j j))))
         (require (>= hsq ksq))
-        (let ((k (sqrt ksq)))
+        (let ((k (raiz ksq)))
           (require (integer? k))
           (list i j k))))))
 @end lisp
@@ -29312,13 +29427,13 @@ evaluating
 
 @lisp
 (define (square x) (* x x))
-(define (sum-of-squares x y)
+(define (suma-de-cuadrados x y)
   (+ (square x) (square y)))
-(sum-of-squares 3 4)
+(suma-de-cuadrados 3 4)
 @end lisp
 
 @noindent
-there is no confusion between the @code{x} in @code{square} and the @code{x} in
+there is no confusion between the @code{x} in @code{cuadrado} and the @code{x} in
 @code{sum-@/of-@/squares}, because we evaluate the body of each procedure in an
 environment that is specially constructed to contain bindings for the local
 variables.  In the query system, we used a different strategy to avoid name
@@ -29996,21 +30111,21 @@ instructions that contains a loop, as shown in @ref{Figure 5.6}.
 roots using Newton's method, as described in @ref{1.1.7}:
 
 @lisp
-(define (sqrt x)
-  (define (good-enough? guess)
+(define (raiz x)
+  (define (aceptable? guess)
     (< (abs (- (square guess) x)) 0.001))
   (define (improve guess)
     (average guess (/ x guess)))
-  (define (sqrt-iter guess)
-    (if (good-enough? guess)
+  (define (raiz-iterador guess)
+    (if (aceptable? guess)
         guess
-        (sqrt-iter (improve guess))))
-  (sqrt-iter 1.0))
+        (raiz-iterador (improve guess))))
+  (raiz-iterador 1.0))
 @end lisp
 
-Begin by assuming that @code{good-enough?} and @code{improve} operations are
+Begin by assuming that @code{aceptable?} and @code{improve} operations are
 available as primitives.  Then show how to expand these in terms of arithmetic
-operations.  Describe each version of the @code{sqrt} machine design by drawing
+operations.  Describe each version of the @code{raiz} machine design by drawing
 a data-path diagram and writing a controller definition in the register-machine
 language.
 @end quotation
@@ -32879,20 +32994,20 @@ ev-sequence-last-exp
 In @ref{Chapter 1} we said that the process described by a procedure such as
 
 @lisp
-(define (sqrt-iter guess x)
-  (if (good-enough? guess x)
+(define (raiz-iterador guess x)
+  (if (aceptable? guess x)
       guess
-      (sqrt-iter (improve guess x) x)))
+      (raiz-iterador (improve guess x) x)))
 @end lisp
 
 @noindent
 is an iterative process.  Even though the procedure is syntactically recursive
 (defined in terms of itself), it is not logically necessary for an evaluator to
-save information in passing from one call to @code{sqrt-iter} to the
+save information in passing from one call to @code{raiz-iterador} to the
 next.@footnote{We saw in @ref{5.1} how to implement such a process with
 a register machine that had no stack; the state of the process was stored in a
 fixed set of registers.} An evaluator that can execute a procedure such as
-@code{sqrt-iter} without requiring increasing storage as the procedure
+@code{raiz-iterador} without requiring increasing storage as the procedure
 continues to call itself is called a @newterm{tail-recursive} evaluator.  The
 metacircular implementation of the evaluator in @ref{Chapter 4} does not
 specify whether the evaluator is tail-recursive, because that evaluator
@@ -32904,9 +33019,9 @@ the stack.
 Our evaluator is tail-recursive, because in order to evaluate the final
 expression of a sequence we transfer directly to @code{eval-dispatch} without
 saving any information on the stack.  Hence, evaluating the final expression in
-a sequence---even if it is a procedure call (as in @code{sqrt-iter}, where the
+a sequence---even if it is a procedure call (as in @code{raiz-iterador}, where the
 @code{if} expression, which is the last expression in the procedure body,
-reduces to a call to @code{sqrt-iter})---will not cause any information to be
+reduces to a call to @code{raiz-iterador})---will not cause any information to be
 accumulated on the stack.@footnote{This implementation of tail recursion in
 @code{ev-sequence} is one variety of a well-known optimization technique used
 by many compilers.  In compiling a procedure that ends with a procedure call,
@@ -32957,7 +33072,7 @@ will still give the same value for any expression.  But this change is fatal to
 the tail-recursive implementation, because we must now return after evaluating
 the final expression in a sequence in order to undo the (useless) register
 saves.  These extra saves will accumulate during a nest of procedure calls.
-Consequently, processes such as @code{sqrt-iter} will require space
+Consequently, processes such as @code{raiz-iterador} will require space
 proportional to the number of iterations rather than requiring constant space.
 This difference can be significant.  For example, with tail recursion, an
 infinite loop can be expressed using only the procedure-call mechanism:
